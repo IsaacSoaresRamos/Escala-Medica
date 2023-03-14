@@ -11,7 +11,7 @@
     border-radius: 50px;
     border: 2px solid var(--color-AzulEscuro);
     padding: 35px;
-    background-color: red;}
+    background-color: var(--color-Azul);}
 #titleI {
     color: var(--color-Branco);
     font-size: 25pt;}
