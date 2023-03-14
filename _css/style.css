@@ -1,0 +1,29 @@
+* {/*Configuração Global*/
+    font-family: Arial, sans-serif;}
+:root{ /* Tabela de Cores*/
+    --color-Azul: #2196F3;
+    --color-AzulEsverdiado: #00ffff;
+    --color-AzulEscuro: #124874;
+    --color-Branco: #ffffff;}
+.wallpaper {
+    background-image: url(/_Img/login.jpg);}
+.login {
+    border-radius: 50px;
+    border: 2px solid var(--color-AzulEscuro);
+    padding: 35px;
+    background-color: red;}
+#titleI {
+    color: var(--color-Branco);
+    font-size: 25pt;}
+#titleII {
+    color: var(--color-Branco);
+    font-size: 18pt;}
+.link {
+    color:var(--color-Branco);}
+.link:hover{
+    text-decoration: none;
+    color: var(--color-AzulEsverdiado);}
+.generica { /*Modificar ou Retirar Depois*/
+    margin: 50px;
+    width: 600px;}
+    

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Testando Bootstrap</title>
+     <!-- Bootstrap -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+     <!-- CSS -->
+     <link rel="stylesheet" href="_css/style.css">
+</head>
+<body class="wallpaper">
+     <div class="container"> <!-- Conteúdo | classe externa Bootstrap -->
+          <div class="row justify-content-center mt-5">  <!-- Coluna do Bootstrap | classe externa Bootstrap-->
+               <div class="login"> <!-- Tela de Login | classe interna-->
+                    <form class="form-login"> <!-- Formulario de Login| Classe Interna-->
+                         <h1 id="titleI" class="text-center">Acesso ao Sistema</h1>   <!--Titulo | classe externa Bootstrap-->
+                         <h2 id="titleII" class="text-center mb-5">Seja Bem vindo</h2> <!--Subtitulo | classe externa Bootstrap-->
+
+                         <div class="input-group input-group-sm mb-4">  <!-- input Matricúla | classe externa Bootstrap-->
+                              <div class="input-group-prepend">
+                                   <span class="input-group-text bg-light px-2" id="inputGroup-sizing-sm">Matricula</span>
+                              </div>    
+                              <input type="text" class="form-control" aria-label="Exemplo do tamanho do input" aria-describedby="inputGroup-sizing-sm">
+                         </div>  <!-- Fim Matricúla -->   
+
+                         <div class="input-group input-group-sm mb-3">  <!--input Senha | classe externa Bootstrap-->
+                              <div class="input-group-prepend">
+                                   <span class="input-group-text bg-light px-3" id="inputGroup-sizing-sm">Senha</span>
+                              </div>          
+                              <input type="password" class="form-control" aria-label="Exemplo do tamanho do input" aria-describedby="inputGroup-sizing-sm">
+                         </div>  <!-- Fim Senha -->
+                         
+                         <div class="text-center mt-5" > <!-- Botão Etrar | classe externa Bootstrap--> 
+                              <button type="button" class="btn btn-outline-light btn-sm btn-block">Entrar</button> 
+                         </div>  <!-- Fim Botão Entrar -->
+                         
+                         <a href="cadastro.html" class="link"><p class="text-center mt-3">Cadastre-se</p></a> <!-- Link Cadastro | classe externa Bootstrap-->
+                         <a href="recup_senha.html" class="link"><p class="text-center">Recuperar Senha</p></a> <!-- Link Recuperar senha | classe externa Bootstrap-->
+                    </form> <!-- Fim class form-login -->
+               </div> <!-- Fim class login -->
+          </div> <!-- Fim class row -->    
+     </div> <!-- Fim class container -->
+     <!-- Javascript Bootstrap [Retirar caso não utilizar funções do Bootstrap que possuem js.]-->
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
