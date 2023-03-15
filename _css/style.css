@@ -6,11 +6,12 @@
     --color-AzulEscuroI: #124874;
     --color-AzulEscuroII: #0B2030; 
     --color-Branco: #ffffff;}
+/* Página de Login */
 .wallpaper {
     background-image: url(/_Img/login.jpg);}
 .login {
     border-radius: 50px;
-    border: 2px solid var(--color-AzulEscuro);
+    border: 2px solid var(--color-AzulEscuroII);
     padding: 35px;
     background-color: var(--color-Azul);}
 #titleI {
@@ -27,9 +28,8 @@
 .generica { /*Modificar ou Retirar Depois*/
     margin: 50px;
     width: 600px;}
-.teste {
-    margin-left: 10%;
-}
+.mat-pass {
+    margin-left: 10%;}
 .cont-mat label {
     margin-bottom: -40px;
     color: var(--color-Branco);}
