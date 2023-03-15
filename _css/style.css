@@ -3,7 +3,8 @@
 :root{ /* Tabela de Cores*/
     --color-Azul: #2196F3;
     --color-AzulEsverdiado: #00ffff;
-    --color-AzulEscuro: #124874;
+    --color-AzulEscuroI: #124874;
+    --color-AzulEscuroII: #0B2030; 
     --color-Branco: #ffffff;}
 .wallpaper {
     background-image: url(/_Img/login.jpg);}
@@ -26,4 +27,25 @@
 .generica { /*Modificar ou Retirar Depois*/
     margin: 50px;
     width: 600px;}
-    
+.teste {
+    margin-left: 10%;
+}
+.cont-mat label {
+    margin-bottom: -40px;
+    color: var(--color-Branco);}
+.cont-mat input {
+    width: 230px;
+    border: none;
+    border-bottom: 1.5px solid var(--color-Branco);
+    background-color: var(--color-Azul);}
+.cont-pass {
+    margin-top: 30px;}
+.cont-pass label {
+    margin-bottom: -40px;
+    color: var(--color-Branco);}
+.cont-pass input {
+    width: 230px;
+    border: none;
+    border-bottom: 1.5px solid var(--color-Branco);
+    background-color: var(--color-Azul);}
+

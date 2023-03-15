@@ -4,7 +4,7 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Testando Bootstrap</title>
+     <title>Login</title>
      <!-- Bootstrap -->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
      <!-- CSS -->
@@ -15,29 +15,52 @@
           <div class="row justify-content-center mt-5">  <!-- Coluna do Bootstrap | classe externa Bootstrap-->
                <div class="login"> <!-- Tela de Login | classe interna-->
                     <form class="form-login"> <!-- Formulario de Login| Classe Interna-->
-                         <h1 id="titleI" class="text-center">Acesso ao Sistema</h1>   <!--Titulo | classe externa Bootstrap-->
-                         <h2 id="titleII" class="text-center mb-5">Seja Bem vindo</h2> <!--Subtitulo | classe externa Bootstrap-->
+                         <!--Titulo | classe externa Bootstrap-->
+                         <h1 id="titleI" class="text-center">Acesso ao Sistema</h1>   
 
-                         <div class="input-group input-group-sm mb-4">  <!-- input Matricúla | classe externa Bootstrap-->
+                         <!--Subtitulo | classe externa Bootstrap-->
+                         <h2 id="titleII" class="text-center mb-5">Seja Bem vindo</h2> 
+                         <div class="teste">
+                              <!-- Matricúla | classe externa Bootstrap-->
+                              <div class="cont-mat">
+                                   <label>Matricúla</label>
+                                   <br/>
+                                   <input type="text" id="mat" class="input-mat" >
+                              </div>
+
+                              <!-- Senha | classe externa Bootstrap-->
+                              <div class="cont-pass">
+                                   <label>Senha</label>
+                                   <br/>
+                                   <input type="password" id="password" class="input-pass" >
+                              </div>
+                         </div>
+                         <!--<div class="input-group input-group-sm mb-4">  
                               <div class="input-group-prepend">
                                    <span class="input-group-text bg-light px-2" id="inputGroup-sizing-sm">Matricula</span>
                               </div>    
                               <input type="text" class="form-control" aria-label="Exemplo do tamanho do input" aria-describedby="inputGroup-sizing-sm">
-                         </div>  <!-- Fim Matricúla -->   
+                         </div> Fim Matricúla -->   
 
-                         <div class="input-group input-group-sm mb-3">  <!--input Senha | classe externa Bootstrap-->
+                         <!-- Senha | classe externa Bootstrap
+                         <div class="input-group input-group-sm mb-3">  
                               <div class="input-group-prepend">
                                    <span class="input-group-text bg-light px-3" id="inputGroup-sizing-sm">Senha</span>
                               </div>          
                               <input type="password" class="form-control" aria-label="Exemplo do tamanho do input" aria-describedby="inputGroup-sizing-sm">
-                         </div>  <!-- Fim Senha -->
+                         </div>   Fim Senha -->
                          
-                         <div class="text-center mt-5" > <!-- Botão Etrar | classe externa Bootstrap--> 
+                         <!-- Botão Etrar | classe externa Bootstrap-->
+                         <div class="text-center mt-5" >  
                               <button type="button" class="btn btn-outline-light btn-sm btn-block">Entrar</button> 
                          </div>  <!-- Fim Botão Entrar -->
                          
-                         <a href="cadastro.html" class="link"><p class="text-center mt-3">Cadastre-se</p></a> <!-- Link Cadastro | classe externa Bootstrap-->
-                         <a href="recup_senha.html" class="link"><p class="text-center">Recuperar Senha</p></a> <!-- Link Recuperar senha | classe externa Bootstrap-->
+                         <!-- Link Cadastro | classe externa Bootstrap-->
+                         <a href="cadastro.html" class="link"><p class="text-center mt-3">Cadastro</p></a> 
+
+                          <!-- Link Recuperar senha | classe externa Bootstrap-->
+                         <a href="recup_senha.html" class="link"><p class="text-center">Recuperar Senha</p></a>
+
                     </form> <!-- Fim class form-login -->
                </div> <!-- Fim class login -->
           </div> <!-- Fim class row -->    
