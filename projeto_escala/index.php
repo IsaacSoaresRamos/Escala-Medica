@@ -1,1 +1,1 @@
-<a href="/projeto_escala/login.php" ><button>Login</button></a>
+<a href="/projeto_escala/Escala-Medica/projeto_escala/login.php" ><button>Login</button></a>

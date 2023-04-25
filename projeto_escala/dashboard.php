@@ -19,7 +19,7 @@ try{
 
 <?php if (!empty($serv)){ ?>
 
-    <a href="/projeto_escala/cadastro.php" ><button>Cadastrar</button></a>
+    <a href="/projeto_escala/Escala-Medica/projeto_escala/cadastro.php" ><button>Cadastrar</button></a>
 
     <table>
         <thead>

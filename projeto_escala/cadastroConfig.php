@@ -1,6 +1,11 @@
 <?php
 require_once 'conexao.php';
 
+echo '<pre>';
+print_r($_POST);
+echo '</pre>';
+die();
+
 if (!empty($_POST)) {
 
     if($_POST['enviarDados'] == 'CAD'){//inserir
@@ -31,19 +36,18 @@ if (!empty($_POST)) {
             }
     }elseif($_POST['enviarDados'] == 'ALT'){//alterar
        try{
-            $sql  = "UPDATE
-                    servidor
-                SET
-                    nome = :nome,
-                    cpf = :cpf,
-                    email = :email
-                    matricula = :matricula
-                    cargo = :cargo
-                    senha = :senha
-                    statu = :statu
-                WHERE
-                    id = :id
-                ";
+            $sql = "UPDATE 
+                        servidor 
+                    SET
+                        nome = :nome,
+                        cpf = :cpf,
+                        email = :email
+                        matricula = :matricula
+                        cargo = :cargo
+                        senha = :senha
+                        statu = :statu
+                    WHERE
+                        id = :id";
 
             $dados = array(
                 ':id' => $_POST['id'],
@@ -55,6 +59,8 @@ if (!empty($_POST)) {
                 ':senha' => sha1($_POST['senha']),
                 ':statu' => $_POST['statu']
                 );
+
+                $stmt = $pdo->prepare($sql);
 
                 if ($stmt->execute($dados)) {
                     header("Location: dashboard.php");

@@ -18,7 +18,7 @@
   <select name="cargo" id="cargo"required>
     <option value="">Selecione um cargo</option>
     <option value="Analista">Analista</option>
-    <option value="Técnico">Técnico</option>
+    <option value="Tecnico">Técnico</option>
   </select><br><br>
 
   <label>Status:</label>
@@ -31,6 +31,6 @@
   <label>Senha:</label>
   <input type="password" name="senha" id="senha" required><br><br>  
 
-  <button type="submit" name="enviarDados" class="btn btn-primary" value="CAD">Cadastrar</button>
+  <button type="submit" name="enviarDados" value="CAD">Cadastrarr</button>
   <a href="dashboard.php" >Cancelar</a>
 </form>

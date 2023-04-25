@@ -59,15 +59,15 @@ if (!empty($_GET['id'])){
       <label>Cargo:</label>
       <select name="cargo" id="cargo"required>
         <option value="">Selecione um cargo</option>
-        <option value="Analista">Analista</option>
-        <option value="Técnico">Técnico</option>
+        <option value="Analista"  <?php if($result['cargo'] == 'Analista') echo "selected" ?>>Analista</option>
+        <option value="Tecnico"   <?php if($result['cargo'] == 'Tecnico')  echo "selected" ?>>Técnico</option>
       </select><br><br>
 
       <label>Status:</label>
       <select name="statu" id="statu"required>
         <option value="">Selecione um status</option>
-        <option value="Ativo">Ativo</option>
-        <option value="Inativo">Inativo</option>
+        <option value="Ativo"   <?php if($result['statu'] == 'Ativo') echo "selected" ?>>Ativo</option>
+        <option value="Inativo" <?php if($result['statu'] == 'Inativo') echo "selected" ?>>Inativo</option>
       </select><br><br>
 
       <label>Senha:</label>
