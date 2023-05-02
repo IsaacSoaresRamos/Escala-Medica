@@ -1,0 +1,124 @@
+* { /* Configuração Global */
+    padding: 3px;
+    color: #ffffff;;
+    font-family: 'Roboto Mono', monospace;}
+
+:root {
+    --color-Amarelo: #FFF067;
+    --color-AmareloI: #b2a427d4;
+
+    --color-Azul_ClaroI: rgba(167, 212, 249, 0.253);
+    --color-Azul_ClaroII: rgba(113, 149, 194, 0.509);
+    --color-Azul_ClaroIII: rgb(9, 135, 152);
+
+    --color-Branco: #FFFFFF;
+
+    --color-Cinza: #4E4E4E;
+
+    --color-Laranja: rgba(247, 138, 6, 0.678);
+
+    --color-Transparencia: rgba(255, 255, 155, 0.4);
+
+    --color-Verde: #00d7155a;
+    --color-Verde_Claro: #06B88E;
+    --color-Verde_ClaroI: #69FF8A;
+    --color-Verde_Escuro_Principal: #001E1C;
+    --color-Verde_Claro_Transparencia: rgba(0, 215, 21);
+
+    --color-Vermelho: rgba(246, 59, 59,);}
+
+.wallpaper {
+    background-color: var(--color-Verde_Escuro_Principal);}
+
+.title img {
+    margin-left: 42%;
+    margin-top: -80px;}
+
+/*==== Barra de Pesquisa ====*/
+.barra-pesq {
+    margin-top: -25px;}
+.barra-pesq label {
+    font-size: 10pt;
+    margin-bottom: -55px;}
+.matric input {
+    width: 150px;
+    height: 20px;
+    padding: 6px;
+    border: none;
+    background-color: var(--color-Verde_Escuro_Principal);
+    border-bottom: 1.5px solid var(--color-Branco);}
+.nome {
+    margin-left: 15%;
+    margin-top: -54px;}
+    .nome input {
+        width: 200px;
+        height: 20px;
+        padding: 6px;
+        border: none;
+        background-color: var(--color-Verde_Escuro_Principal);
+        border-bottom: 1.5px solid var(--color-Branco);}
+.cargo {
+    margin-left: 34%;
+    margin-top: -54px;}
+    .cargo input { 
+        width: 170px;
+        height: 20px;
+        padding: 6px;
+        border: none;
+        background-color: var(--color-Verde_Escuro_Principal);
+        border-bottom: 1.5px solid var(--color-Branco);}
+.btn-pesqu {
+    margin-left: 50%;
+    margin-top: -50px;}
+    .btn-pesqu input {
+        width: 35px;
+        height: 35px;
+        border: none;
+        border-radius: 20%;
+        background-color: var(--color-AmareloI)}
+
+/*==== Cadastrar | Consul.Escala ====*/
+.btn-cad button {
+    margin-top: 50px;
+    border: none;
+    border-radius: 4px;}
+    .cad {
+        font-size: 10pt;
+        font-weight: bold;
+        width: 100px;
+        background-color: var(--color-Verde);}
+    .escal {
+        font-size: 10pt;
+        font-weight: bold;
+        width: 140px;
+        margin-left: 15px;
+        background-color: var(--color-Laranja)}
+
+/*==== Tabela ====*/
+
+.tab-cont {
+    display: flex;
+    align-items: center; 
+    justify-content: center; }
+.tble-geral {
+    width: 1300px;
+    border: 1.5px solid var(--color-Verde_Escuro_Principal);}
+.tab-head th {
+    padding: 10px;
+    font-size: 11pt;
+    text-align: center;
+    background-color: var(--color-Azul_ClaroIII);
+    border: 3px solid var(--color-Verde_Escuro_Principal);}
+.tab-head img {
+    width: 30px;
+}
+.tab-body td {
+    padding: 7px;
+    text-align: center;
+    font-size: 11pt;
+    border: 3px solid var(--color-Verde_Escuro_Principal);}
+#rowI {
+    background-color: var(--color-Azul_ClaroI);}
+#rowII {
+    background-color: var(--color-Azul_ClaroII);}
+

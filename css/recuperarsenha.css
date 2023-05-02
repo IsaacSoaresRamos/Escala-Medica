@@ -1,0 +1,42 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    color: var(--color-Branco);
+    font-family: Arial, sans-serif;}
+:root{ /* Tabela de Cores*/
+    --color-Amarelo: #E59F16;
+    --color-VerdeEscuro: #001E1C;
+    --color-VerdeAgua: #06b88e;
+    --color-Transparente: #0000;
+    --color-AzulClaroTransparencia: #7195c24a;
+    --color-Verde: #00D715; 
+    --color-Branco: #ffffff;}
+
+.wallpaper {
+    background-color: var(--color-VerdeEscuro);}
+.packege {
+    width: 450px;
+    padding: 20px;
+    font-size: 12pt;
+    margin: 0px auto;
+    text-align: center;
+    border-radius: 20px;
+    background-color: var(--color-AzulClaroTransparencia);}
+
+.packege label{
+    font-size: 10pt;
+    margin-left: -190px;
+    margin-bottom: -15px;}
+.btn-email {
+    border: none;
+    width: 250px;
+    border-bottom: 1.5px solid var(--color-Branco);
+    background-color: var(--color-Transparente);}
+
+.btn-enviar {
+    width: 100px;
+    margin-top: 20px;
+    border-radius: 10px;
+    color: var(--color-Verde);
+    border: 1.5px solid var(--color-Verde);
+    background-color: var(--color-Transparente);}

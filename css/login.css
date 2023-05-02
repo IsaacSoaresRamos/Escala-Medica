@@ -1,51 +1,52 @@
-* {/*Configuração Global*/
+* {
+    padding: 0px;
+    margin: 0px;
+    color: var(--color-Branco);
     font-family: Arial, sans-serif;}
 :root{ /* Tabela de Cores*/
-    --color-Azul: #2196F3;
-    --color-AzulEsverdiado: #00ffff;
-    --color-AzulEscuroI: #124874;
-    --color-AzulEscuroII: #0B2030; 
+    --color-Amarelo: #E59F16;
+    --color-VerdeEscuro: #001E1C;
+    --color-VerdeAgua: #06b88e;
+    --color-Transparente: #0000;
+    --color-AzulClaroTransparencia: #7195c24a;
+    --color-Verde: #00D715; 
     --color-Branco: #ffffff;}
-/* Página de Login */
+/* Páginas de Login */
 .wallpaper {
-    background-image: url(/_Img/login.jpg);}
+    background-color: var(--color-VerdeEscuro);}
 .login {
+    width: 400px;
     border-radius: 50px;
-    border: 2px solid var(--color-AzulEscuroII);
     padding: 35px;
-    background-color: var(--color-Azul);}
+    background-color: var(--color-AzulClaroTransparencia);}
 #titleI {
     color: var(--color-Branco);
-    font-size: 25pt;}
-#titleII {
-    color: var(--color-Branco);
-    font-size: 18pt;}
+    font-size: 23pt;}
 .link {
     color:var(--color-Branco);}
 .link:hover{
     text-decoration: none;
     color: var(--color-AzulEsverdiado);}
-.generica { /*Modificar ou Retirar Depois*/
-    margin: 50px;
-    width: 600px;}
 .mat-pass {
+    margin-top: 35px;
     margin-left: 10%;}
 .cont-mat label {
     margin-bottom: -40px;
     color: var(--color-Branco);}
 .cont-mat input {
-    width: 230px;
+    width: 250px;
     border: none;
     border-bottom: 1.5px solid var(--color-Branco);
-    background-color: var(--color-Azul);}
+    background-color: var(--color-Transparente);}
 .cont-pass {
     margin-top: 30px;}
 .cont-pass label {
     margin-bottom: -40px;
     color: var(--color-Branco);}
-.cont-pass input {
-    width: 230px;
+.pass {
+    width: 250px;
     border: none;
     border-bottom: 1.5px solid var(--color-Branco);
-    background-color: var(--color-Azul);}
-
+    background-color: var(--color-Transparente);}
+.recuperar{
+    margin-top: 30px;}
