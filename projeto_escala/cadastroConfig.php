@@ -1,11 +1,11 @@
 <?php
 require_once 'conexao.php';
-
+/*
 echo '<pre>';
 print_r($_POST);
 echo '</pre>';
 die();
-
+*/
 if (!empty($_POST)) {
 
     if($_POST['enviarDados'] == 'CAD'){//inserir
@@ -63,19 +63,32 @@ if (!empty($_POST)) {
                 $stmt = $pdo->prepare($sql);
 
                 if ($stmt->execute($dados)) {
-                    header("Location: dashboard.php");
+                        header("Location: dashboard.php");
                   }
        }catch(PDOException $e) {
             header("Location: dashboard.php");
        }
     }elseif($_POST['enviarDados'] == 'DEL'){//excluir
-
-    }else{
-        header("Location: cadastro.php");
-    }
-
-}
-else {
+        try {
+            $sql = "DELETE FROM servidor WHERE id = :id ";
+            $stmt = $pdo->prepare($sql);
+      
+            $dados = array(':id' => $_POST['id']);
+      
+            if ($stmt->execute($dados)) {
+              header("Location: dashboard.php");
+            }
+            else {
+              header("Location: dashboard.php");
+            }
+          } catch (PDOException $e) {
+            //die($e->getMessage());
+            header("Location: dashboard.php");
+          }
+        }else {
+            header("Location: dashboard.php");
+          }
+}else {
   header("Location: cadastro.php");
 }
 die();
