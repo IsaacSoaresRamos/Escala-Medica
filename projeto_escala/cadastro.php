@@ -1,6 +1,8 @@
 
 <h2>Cadastro de Servidores</h2>
 
+
+
 <form method="post" action="cadastroConfig.php">
   <label>Nome:</label>
   <input type="text" name="nome" id="nome" required><br><br>
