@@ -28,7 +28,7 @@ try{
                 <th >cpf</th>
                 <th >email</th>
                 <th >matricula</th>
-                <th >cargo</th>
+                <th >especialidade</th>
                 <th >status</th>
                 <th >ações</th>
             </tr>
@@ -40,7 +40,7 @@ try{
                     <td><?php echo $a['cpf']?></td>
                     <td><?php echo $a['email']?></td>
                     <td><?php echo $a['matricula']?></td>
-                    <td><?php echo $a['cargo']?></td>
+                    <td><?php echo $a['id_especialidade']?></td>
                     <td><?php echo $a['statu']?></td>
                     <td>
                         <a href="editar.php?id=<?php echo $a['id']; ?>">Editar</a>

@@ -1,13 +1,13 @@
 <?php
 require_once 'conexao.php';
 
-if (!empty($_GET['id'])){
-  $sql = "SELECT * FROM servidor WHERE id = :id";
+if (!empty($_GET['id_servidor'])){
+  $sql = "SELECT * FROM servidor WHERE id_servidor = :id_servidor";
 
   try{
 
     $stmt = $pdo->prepare($sql);
-    $stmt->execute(array(':id' => $_GET['id']));
+    $stmt->execute(array(':id_servidor' => $_GET['id_servidor']));
 
     if ($stmt->rowCount() == 1) {
       $result = $stmt->fetchAll();
@@ -41,7 +41,7 @@ if (!empty($_GET['id'])){
 
     <form method="post" action="cadastroConfig.php">
 
-      <input type="hidden" name="id" id="id" value="<?php echo $result['id']; ?>" readonly >
+      <input type="hidden" name="id_servidor" id="id_servidor" value="<?php echo $result['id_servidor']; ?>" readonly >
 
       <label>Nome:</label>
 
@@ -56,11 +56,11 @@ if (!empty($_GET['id'])){
       <label>E-mail:</label>
       <input type="email" name="email" id="email" value="<?php echo $result['email']; ?>" required><br><br>
 
-      <label>Cargo:</label>
-      <select name="cargo" id="cargo"required>
-        <option value="">Selecione um cargo</option>
-        <option value="Analista"  <?php if($result['cargo'] == 'Analista') echo "selected" ?>>Analista</option>
-        <option value="Tecnico"   <?php if($result['cargo'] == 'Tecnico')  echo "selected" ?>>Técnico</option>
+      <label>especialidade:</label>
+      <select name="id_especialidade" id="id_especialidade"required>
+        <option value="">Selecione uma especialidade</option>
+        <option value="Analista"  <?php if($result['id_especialidade'] == 'Analista') echo "selected" ?>>Analista</option>
+        <option value="Tecnico"   <?php if($result['id_especialidade'] == 'Tecnico')  echo "selected" ?>>Técnico</option>
       </select><br><br>
 
       <label>Status:</label>

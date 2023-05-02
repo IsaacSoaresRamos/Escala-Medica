@@ -12,9 +12,9 @@ if (!empty($_POST)) {
         
             try {
                 $sql = "INSERT INTO servidor
-                        (nome, cpf, email, matricula, cargo, senha, statu)
+                        (nome, cpf, email, matricula, id_especialidade, senha, statu)
                         VALUES
-                        (:nome, :cpf, :email, :matricula, :cargo, :senha, :statu)";
+                        (:nome, :cpf, :email, :matricula, :id_especialidade, :senha, :statu)";
 
                 $stmt = $pdo->prepare($sql);
 
@@ -23,7 +23,7 @@ if (!empty($_POST)) {
                 ':cpf' => $_POST['cpf'],
                 ':email' => $_POST['email'],
                 ':matricula' => $_POST['matricula'],
-                ':cargo' => $_POST['cargo'],
+                ':id_especialidade' => $_POST['id_especialidade'],
                 ':senha' => sha1($_POST['senha']),
                 ':statu' => $_POST['statu']
                 );
@@ -43,19 +43,19 @@ if (!empty($_POST)) {
                         cpf = :cpf,
                         email = :email
                         matricula = :matricula
-                        cargo = :cargo
+                        id_especialidade = :id_especialidade
                         senha = :senha
                         statu = :statu
                     WHERE
-                        id = :id";
+                        id_servidor = :id_servidor";
 
             $dados = array(
-                ':id' => $_POST['id'],
+                ':id_seridor' => $_POST['id_servidor'],
                 ':nome' => $_POST['nome'],
                 ':cpf' => $_POST['cpf'],
                 ':email' => $_POST['email'],
                 ':matricula' => $_POST['matricula'],
-                ':cargo' => $_POST['cargo'],
+                ':id_especialidade' => $_POST['id_especialidade'],
                 ':senha' => sha1($_POST['senha']),
                 ':statu' => $_POST['statu']
                 );
@@ -70,10 +70,10 @@ if (!empty($_POST)) {
        }
     }elseif($_POST['enviarDados'] == 'DEL'){//excluir
         try {
-            $sql = "DELETE FROM servidor WHERE id = :id ";
+            $sql = "DELETE FROM servidor WHERE id_servidor = :id_servidor ";
             $stmt = $pdo->prepare($sql);
       
-            $dados = array(':id' => $_POST['id']);
+            $dados = array(':id_servidor' => $_POST['id_servidor']);
       
             if ($stmt->execute($dados)) {
               header("Location: dashboard.php");

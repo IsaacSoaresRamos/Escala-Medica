@@ -14,9 +14,9 @@
   <label>E-mail:</label>
   <input type="email" name="email" id="email" required><br><br>
 
-  <label>Cargo:</label>
-  <select name="cargo" id="cargo"required>
-    <option value="">Selecione um cargo</option>
+  <label>especialidade:</label>
+  <select name="especialidade" id="id_especialidade"required>
+    <option value="">Selecione uma especialidade</option>
     <option value="Analista">Analista</option>
     <option value="Tecnico">Técnico</option>
   </select><br><br>
