@@ -8,6 +8,7 @@ class Servidor {
     private $id_especialidade;
     private $senha;
     private $statu;
+
     public function __construct($nome, $cpf, $email, $matricula, $id_especialidade, $senha, $statu) {
        $this->nome = $nome;
        $this->cpf = $cpf;
@@ -21,6 +22,10 @@ class Servidor {
      public function getId_Servidor() {
         return $this->id_servidor;
      }
+     public function getNome() {
+        return $this->nome;
+     }
+     
      public function getCPF() {
         return $this->cpf;
      }
@@ -42,6 +47,9 @@ class Servidor {
 
      public function setId_Servidor($id_servidor) {
         $this->id_servidor = $id_servidor;
+     }
+     public function setNome($nome) {
+        $this->nome = $nome;
      }
      public function setCPF($cpf) {
         $this->cpf = $cpf;
