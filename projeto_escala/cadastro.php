@@ -17,10 +17,9 @@
   <input type="email" name="email" id="email" required><br><br>
 
   <label>especialidade:</label>
-  <select name="especialidade" id="id_especialidade"required>
+  <select name="id_especialidade" id="id_especialidade"required>
     <option value="">Selecione uma especialidade</option>
-    <option value="Analista">Analista</option>
-    <option value="Tecnico">Técnico</option>
+    <option value="1">Analista</option>
   </select><br><br>
 
   <label>Status:</label>
@@ -33,6 +32,6 @@
   <label>Senha:</label>
   <input type="password" name="senha" id="senha" required><br><br>  
 
-  <button type="submit" name="enviarDados" value="CAD">Cadastrarr</button>
+  <button type="submit" >Cadastrarr</button>
   <a href="dashboard.php" >Cancelar</a>
 </form>
