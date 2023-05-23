@@ -1,5 +1,5 @@
 <?php
-require_once 'conexao.php';
+require_once 'Config/conexao.php';
 
 if (!empty($_GET['id_servidor'])){
   $sql = "SELECT * FROM servidor WHERE id_servidor = :id_servidor";

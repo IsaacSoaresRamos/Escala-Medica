@@ -3,7 +3,7 @@
 
 
 
-<form method="post" action="cadastroConfig.php">
+<form method="post" action="/projeto_escala/Escala-Medica/Projeto/Config/InsertConfig.php">
   <label>Nome:</label>
   <input type="text" name="nome" id="nome" required><br><br>
 
@@ -17,9 +17,9 @@
   <input type="email" name="email" id="email" required><br><br>
 
   <label>especialidade:</label>
-  <select name="id_especialidade" id="id_especialidade"required>
+  <select name="id_esp" id="id_esp"required>
     <option value="">Selecione uma especialidade</option>
-    <option value="1">Analista</option>
+    <option value="1">Doutor</option>
   </select><br><br>
 
   <label>Status:</label>
@@ -33,5 +33,5 @@
   <input type="password" name="senha" id="senha" required><br><br>  
 
   <button type="submit" >Cadastrarr</button>
-  <a href="dashboard.php" >Cancelar</a>
+  <a href="projeto_escala/Escala-Medica/Projeto/dashboard.php" >Cancelar</a>
 </form>

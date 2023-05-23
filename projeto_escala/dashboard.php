@@ -1,6 +1,10 @@
 <?php
 
-require_once 'conexao.php';
+require_once '/xampp/htdocs/projeto_escala/Escala-Medica/projeto_escala/Config/conexao.php ';
+
+?>
+<h1>oi</h1>
+<?php
 
 $sql = "SELECT * FROM servidor ORDER BY id ASC" ;
 try{
