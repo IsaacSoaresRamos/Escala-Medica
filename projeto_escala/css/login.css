@@ -1,0 +1,123 @@
+/* Configuração Geral */
+* { 
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, sans-serif;}
+/* Tabela de Cores */
+:root{ 
+    --color-Branco: #ffffff;
+    --color-Amarelo: #deb147;
+    --color-AzulEscuro: #052b348f;
+    --color-CaixaLogin: #052b3450;
+    --color-VerdeAgua: #06b88e; /* OK */
+    --color-Verde: #54d65e;
+
+    --color-Menu: #122024;
+    --color-MenuI: #35535b;
+    --color-SombraMenu: #368a76;
+    --color-TextoMenu: #8cb9f083;}
+
+
+/* Body */
+.wallpaper { 
+    background: rgb(89,226,206);
+    background: linear-gradient(0deg, rgba(89,226,206,1) 0%, rgba(59,166,150,1) 34%, rgba(43,134,121,1) 53%);}
+
+
+/* Barra Superior - Menu */
+.hdr {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 4rem;
+    background-color: var(--color-Menu);}
+
+.logo img {
+    margin-left: 1rem;
+    margin-top:  .1rem;}
+
+.packge-menu {
+    position: relative;
+    float: right;
+    margin-top: -3.6rem;}
+
+.pack-menu p {
+    display: inline-block;
+    padding-right: 1rem;}
+    .pack-menu a {
+        border: none;
+        color: var(--color-MenuI);
+        text-decoration: none;
+        letter-spacing: 2px;
+        background-color: var(--color-Menu);}
+        .pack-menu a:hover {
+            transition: 0.5s;
+            color: var(--color-VerdeAgua);
+            background-color: var(--color-Menu);}
+    .pack-menu button {
+        border: none;
+        border-radius: 3px;
+        font-weight: 600;
+        color: var(--color-VerdeAgua);
+        background-color: var(--color-Menu);}
+        .pack-menu button:hover {
+            transition: 0.5s;
+            cursor: pointer;
+            color: var(--color-Amarelo);}
+.link-login {
+    display: inherit;
+    margin-left: 65rem;
+    margin-top: -2.5rem;
+    margin-right: 4rem;}
+.titulo {
+    font-size: 30pt;
+    margin-top: 6rem;
+    margin-left: 31rem;
+    padding: 1rem;
+    color: var(--color-Branco); 
+    text-shadow: var(--color-AzulEscuro) 0.1em 0.1em 0.2em}
+
+.packege {
+    float: right;
+    width: 330px;
+    height: 290px;
+    padding: 24px;
+    margin-top: -30px;
+    border-radius: 10px;
+    background-color: var(--color-CaixaLogin);}
+    .packege a {
+        text-decoration: none;}
+
+.packege-inputs {
+    font-size: 12pt;
+    text-align: center;}
+    .packege-inputs label {
+        margin-top: .5rem;
+        color: var(--color-Branco);
+        text-align: center;}
+    .packege-inputs input {
+        width: 250px;
+        text-align: start;}
+.btn button{
+    width: 150px;
+    margin-top: -10px;
+    margin-left: 55px;}
+
+.recuperar {
+    margin-top: 1rem;
+    margin-bottom: 2.7rem;
+    margin-left: 550px;}
+    .recuperar a {
+        color: var(--color-MenuI); }
+    .recuperar label {
+        color: var(--color-MenuI);}
+    .recuperar button {
+        border: none;
+        margin-left: 40px;
+        color: var(--color-AzulMedio);
+        background-color: var(--color-Transparente);}
+        .recuperar button:hover {
+            cursor: pointer;
+            transition: 0.8s;
+            color: var(--color-Menu);}
+
