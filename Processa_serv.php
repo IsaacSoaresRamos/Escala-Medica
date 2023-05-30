@@ -1,0 +1,95 @@
+<?php
+require_once 'Conexao.php';
+// Definir o BD (e a tabela)
+// Conectar ao BD (com o PHP)
+
+session_start();
+
+if (empty($_SESSION)) {
+  // Significa que as variáveis de SESSAO não foram definidas.
+  // Não poderia acessar aqui.
+  header("Location: index.php?msgErro=Você precisa se autenticar no sistema.");
+  die();
+}
+
+/*
+echo '<pre>';
+print_r($_POST);
+echo '</pre>';
+die();
+*/
+
+if (!empty($_POST)) {
+  // Está chegando dados por POST e então posso tentar inserir no banco
+  // Obter as informações do formulário ($_POST)
+  // Verificar se estou tentando INSERIR (CAD) / ALTERAR (ALT) / EXCLUIR (DEL)
+  if ($_POST['enviarDados'] == 'ALT') { // CADASTRAR!!!
+    
+    try {
+      $sql = "UPDATE
+                serv_log
+              SET
+                nome = :nome,
+                cpf = :cpf,
+                matricula = :matricula,
+                email = :email,
+                senha = :senha
+              WHERE
+                id_serv = :id_serv";
+
+      // Definir dados para SQL
+      $dados = array(
+        ':id_serv' => $_POST['id_serv'],
+        ':nome' => $_POST['nome'],
+        ':cpf' => $_POST['cpf'],
+        ':matricula' => $_POST['matricula'],
+        ':email' => $_POST['email'],
+        ':senha' => sha1($_POST['senha'])
+      );
+
+      $stmt = $pdo->prepare($sql);
+
+      // Executar SQL
+      if ($stmt->execute($dados)) {
+        header("Location: index_logado.php?msgSucesso=Alteração realizada com sucesso!!");
+      }
+      else {
+        header("Location: index_logado.php?msgErro=Falha ao ALTERAR servidor..");
+      }
+    } catch (PDOException $e) {
+      //die($e->getMessage());
+      header("Location: index_logado.php?msgErro=Falha ao ALTERAR servidor..");
+    }
+  }
+  elseif ($_POST['enviarDados'] == 'DEL') { // EXCLUIR!!!
+    /** Implementação do excluir aqui.. */
+    // id_anuncio ok
+    // e-mail usuário logado ok
+    try {
+      $sql = "DELETE FROM serv_log WHERE id_serv = :id_serv";
+      $stmt = $pdo->prepare($sql);
+
+      $dados = array(':id_serv' => $_POST['id_serv']);
+
+      if ($stmt->execute($dados)) {
+        header("Location: index_logado.php?msgSucesso=Servidor excluído com sucesso!!");
+      }
+      else {
+        header("Location: index_logado.php?msgSucesso=Falha ao EXCLUIR servidor..");
+      }
+    } catch (PDOException $e) {
+      //die($e->getMessage());
+      header("Location: index_logado.php?msgSucesso=Falha ao EXCLUIR servidor..");
+    }
+  }
+  else {
+    header("Location: index_logado.php?msgErro=Erro de acesso (Operação não definida).");
+  }
+}
+else {
+  header("Location: index_logado.php?msgErro=Erro de acesso.");
+}
+die();
+
+// Redirecionar para a página inicial (index_logado) c/ mensagem erro/sucesso
+ ?>
