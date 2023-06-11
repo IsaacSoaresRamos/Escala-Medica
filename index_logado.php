@@ -61,6 +61,9 @@ $sql = "SELECT * FROM serv_log ORDER BY id_serv ASC";
     <div>
       <a href="Logout.php" class="">Sair</a>
     </div>
+    <div>
+      <a href="cad_esp.php" class="">Cadastrar nova Especialidade</a>
+    </div>
     
     <h2>Olá <i><?php echo $_SESSION['nome']; ?></i>, seja bem-vindo(a)!</h2>
 
