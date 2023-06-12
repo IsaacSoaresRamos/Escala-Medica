@@ -89,7 +89,6 @@ if (!empty($_POST)) {
 
       // Definir dados para SQL
       $dados = array(
-        ':id_tabela' => $_POST['id_tabela'],
         ':id_serv' => $_POST['id_serv'],
         ':id_esp' => $_POST['id_esp'],
         ':sd' => $_POST['sd'],

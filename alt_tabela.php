@@ -71,30 +71,46 @@ else {
 
         <label for="sd">SD - Servico Diurno</label>
           <select class="" name="sd" id="sd">
-            <option selected>Selecione o porte do animal</option>
-            <option value="true" <?php echo $result['sd'] == 'true' ? "selected" : "" ?>>Sim</option>
-            <option value="false" <?php echo $result['sd'] == 'false' ? "selected" : "" ?>>Não</option>
+            <option selected>Selecione o valor</option>
+            <option value="true" <?php echo $result['sd'] == true ? "selected" : "" ?>>Sim</option>
+            <option value="false" <?php echo $result['sd'] == false ? "selected" : "" ?>>Não</option>
           </select>
 
         <br><br>
 
         <label for="sv">SV - Servico Vespertino</label>
-        <input type="checkbox" class="" name="sv" id="sv" value="<?php echo $result['sv']; ?>" >
+        <select class="" name="sv" id="sv">
+            <option selected>Selecione o valor</option>
+            <option value="true" <?php echo $result['sv'] == true ? "selected" : "" ?>>Sim</option>
+            <option value="false" <?php echo $result['sv'] == false ? "selected" : "" ?>>Não</option>
+          </select>
 
         <br><br>
 
         <label for="lc">LC - Licenca ou Atestado Medico</label>
-        <input type="checkbox" class="" name="lc" id="lc" value="<?php echo $result['lc']; ?>" >
+        <select class="" name="lc" id="lc">
+            <option selected>Selecione o valor</option>
+            <option value="true" <?php echo $result['lc'] == true ? "selected" : "" ?>>Sim</option>
+            <option value="false" <?php echo $result['lc'] == false ? "selected" : "" ?>>Não</option>
+          </select>
 
         <br><br>
 
         <label for="lp">LP - Licenca Premio</label>
-        <input type="checkbox" class="" name="lp" id="lp" value="<?php echo $result['lp']; ?>" >
+        <select class="" name="lp" id="lp">
+            <option selected>Selecione o valor</option>
+            <option value="true" <?php echo $result['lp'] == true ? "selected" : "" ?>>Sim</option>
+            <option value="false" <?php echo $result['lp'] == false ? "selected" : "" ?>>Não</option>
+          </select>
 
         <br><br>
 
         <label for="lm">LM - Licenca Maternidade</label>
-        <input type="checkbox" class="" name="lm" id="lm" value="<?php echo $result['lm']; ?>" >
+        <select class="" name="lm" id="lm">
+            <option selected>Selecione o valor</option>
+            <option value="true" <?php echo $result['lm'] == true ? "selected" : "" ?>>Sim</option>
+            <option value="false" <?php echo $result['lm'] == false ? "selected" : "" ?>>Não</option>
+          </select>
 
         <br><br>
 
