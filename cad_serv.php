@@ -1,7 +1,7 @@
 <<?php 
-require_once 'Conexao.php';
+require_once 'Conexao.php'; //Puxa a conexão do banco
 
-session_start();
+session_start();//Inicia a seção
 
 if (empty($_SESSION)) {
   // Significa que as variáveis de SESSAO não foram definidas.

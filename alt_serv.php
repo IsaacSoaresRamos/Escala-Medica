@@ -1,7 +1,7 @@
 <?php
-require_once 'Conexao.php';
+require_once 'Conexao.php'; //Puxa a conexão do banco
 
-session_start();
+session_start();//Inicia a seção
 
 if (empty($_SESSION)) {
   // Significa que as variáveis de SESSAO não foram definidas.
@@ -10,40 +10,23 @@ if (empty($_SESSION)) {
   die();
 }
 
-/*
-//echo "Estou logado";
-echo '<pre>';
-print_r($_SESSION);
-print_r($_GET);
-echo '</pre>';
-die();
-*/
 
 $result = array();
 
 // Verificar se está chegando a informação (id_serv) pelo $_GET
 if (!empty($_GET['id_serv'])) {
 
-    // Buscar as informações do anúncio a ser alterado (no banco de dados)
+  // Buscar as informações do servidor a ser alterado (no banco de dados)
   $sql = "SELECT * FROM serv_log WHERE id_serv = :id_serv";
   try {
     $stmt = $pdo->prepare($sql);
 
     $stmt->execute(array(':id_serv' => $_GET['id_serv']));
 
-    // Verificar se o usuário logado pode acessar/alterar as informações desse registro (id_serv)
     if ($stmt->rowCount() == 1) {
       // Registro obtido no banco de dados
       $result = $stmt->fetchAll();
       $result = $result[0]; // Informações do registro a ser alterado
-
-      /*
-      echo '<pre>';
-      print_r($result);
-      echo '</pre>';
-      
-      die();
-      */
     }
     else {
       header("Location: index_logado.php");
@@ -52,7 +35,6 @@ if (!empty($_GET['id_serv'])) {
 
   } catch (PDOException $e) {
     header("Location: index_logado.php?msgErro=Falha ao obter registro no banco de dados.");
-    //die($e->getMessage());
   }
 }
 else {
@@ -60,8 +42,6 @@ else {
   header("Location: index_logado.php?msgErro=Você não tem permissão para acessar esta página");
   die();
 }
-
-  // Redirecionar (permissão)
 ?>
 
 <!DOCTYPE html>

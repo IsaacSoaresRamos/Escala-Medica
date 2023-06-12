@@ -1,9 +1,7 @@
 <?php
-require_once 'Conexao.php';
-// Definir o BD (e a tabela)
-// Conectar ao BD (com o PHP)
+require_once 'Conexao.php'; //Puxa a conexão do banco
 
-session_start();
+session_start();//Inicia a seção
 
 if (empty($_SESSION)) {
   // Significa que as variáveis de SESSAO não foram definidas.
@@ -11,13 +9,6 @@ if (empty($_SESSION)) {
   header("Location: index.php?msgErro=Você precisa se autenticar no sistema.");
   die();
 }
-
-/*
-echo '<pre>';
-print_r($_POST);
-echo '</pre>';
-die();
-*/
 
 if (!empty($_POST)) {
   // Está chegando dados por POST e então posso tentar inserir no banco
@@ -62,9 +53,7 @@ if (!empty($_POST)) {
     }
   }
   elseif ($_POST['enviarDados'] == 'DEL') { // EXCLUIR!!!
-    /** Implementação do excluir aqui.. */
-    // id_anuncio ok
-    // e-mail usuário logado ok
+
     try {
       $sql = "DELETE FROM serv_log WHERE id_serv = :id_serv";
       $stmt = $pdo->prepare($sql);
@@ -78,7 +67,6 @@ if (!empty($_POST)) {
         header("Location: index_logado.php?msgSucesso=Falha ao EXCLUIR servidor..");
       }
     } catch (PDOException $e) {
-      //die($e->getMessage());
       header("Location: index_logado.php?msgSucesso=Falha ao EXCLUIR servidor..");
     }
   }

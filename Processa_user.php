@@ -1,13 +1,5 @@
 <?php
-require_once 'Conexao.php';
-// Definir o BD (e a tabela)
-// Conectar ao BD (com o PHP)
-
-/*
-echo '<pre>';
-print_r($_POST);
-echo '</pre>';
-*/
+require_once 'Conexao.php'; //Puxa a conexão do banco
 
 if (!empty($_POST)) {
   // Está chegando dados por POST e então posso tentar inserir no banco

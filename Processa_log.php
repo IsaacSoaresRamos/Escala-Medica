@@ -1,15 +1,5 @@
 <?php
-require_once 'Conexao.php';
-// Conectar ao BD (com o PHP)
-/*
-echo '<pre>';
-print_r($_POST);
-echo '</pre>';
-die();
-/*
-tell=cpf
-dt=matricula
-*/
+require_once 'Conexao.php'; //Puxa a conexão do banco
 
 // Verificar se está chegando dados por POST
 if (!empty($_POST)) {
@@ -29,12 +19,10 @@ if (!empty($_POST)) {
     );
 
     $stmt->execute($dados);
-    //$stmt->execute(array(':email' => $_POST['email'], ':senha' => $_POST['senha']));
 
     $result = $stmt->fetchAll();
 
-    if ($stmt->rowCount() == 1) { // Se o resultado da consulta SQL trouxer um registro
-      // Autenticação foi realizada com sucesso
+    if ($stmt->rowCount() == 1) { 
 
       $result = $result[0];
       // Definir as variáveis de sessão
