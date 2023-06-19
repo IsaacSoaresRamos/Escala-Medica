@@ -1,7 +1,7 @@
 <?php
 require_once 'Conexao.php';
 
-session_start();
+session_start();//Inicia a seção
 
 if (empty($_SESSION)) {
   // Significa que as variáveis de SESSAO não foram definidas.
@@ -10,12 +10,12 @@ if (empty($_SESSION)) {
   die();
 }
 
-$sql = "SELECT * FROM tabela ORDER BY id_tabela ASC";
+  $sql = "SELECT * FROM tabela ORDER BY id_tabela ASC";
   try {
     $stmt = $pdo->prepare($sql);
     if ($stmt->execute()) {
       // Execução da SQL Ok!!
-      $tabela = $stmt->fetchAll();
+      $tabelas = $stmt->fetchAll();
     }
     else {
       die("Falha ao executar a SQL.. #2");
@@ -30,10 +30,10 @@ $sql = "SELECT * FROM tabela ORDER BY id_tabela ASC";
 <html lang="pt-br" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Tabela</title>
+    <title>Escala Médica</title>
   </head>
   <body>
-    <?php if (!empty($_GET['msgErro'])) 
+  <?php if (!empty($_GET['msgErro'])) 
     { 
       echo $_GET['msgErro'];
     }
@@ -47,18 +47,20 @@ $sql = "SELECT * FROM tabela ORDER BY id_tabela ASC";
     <div>
       <a href="Logout.php" class="">Sair</a>
     </div>
-    
-    <h2>Você está na Tabela de Escala Medica!</h2>
 
-    <h3>Listagem de tabela</h3>
-    <?php if (!empty($tabela)) { ?>
-      <!-- Aqui que será montada a tabela com a relação de anúncios!! -->
+    <div class="container">
+      <div class="col-md-11">
+        <h2 class="title">Olá seja bem-vindo(a) a Escala Médica!</h2>
+      </div>
+    </div>
+    <div class="container">
+      <a href="cad_tabela.php" class="btn btn-primary">Nova Escala</a>
+    </div>
 
-      <a href="cad_tabela.html" class="">Cadastrar dados na Tabela</a>
-      
-      <br><br>
-      
-      <table>
+    <?php if (!empty($tabelas)) { ?>
+      <!-- Aqui que será montada a tabela com a relação de Escala!! -->
+      <div class="container">
+        <table class="table table-striped">
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -81,16 +83,56 @@ $sql = "SELECT * FROM tabela ORDER BY id_tabela ASC";
             </tr>
           </thead>
           <tbody>
-            <?php foreach ($tabela as $t) { ?>
+            <?php foreach ($tabelas as $t) { ?>
               <tr>
                 <th scope="row"><?php echo $t['id_tabela']; ?></th>
                 <td><?php echo $t['id_serv']; ?></td>
                 <td><?php echo $t['id_esp']; ?></td>
-                <td><?php echo $t['sd']; ?></td>
-                <td><?php echo $t['sv']; ?></td>
-                <td><?php echo $t['lc']; ?></td>
-                <td><?php echo $t['lp']; ?></td>
-                <td><?php echo $t['lm']; ?></td>
+                <td>
+                  <?php
+                    if ($t['sd'] == 'true') {
+                      echo "Sim";
+                    } else {
+                      echo "Não";
+                    }
+                  ?>
+                </td>
+                <td>
+                  <?php
+                    if ($t['sv'] == 'true') {
+                      echo "Sim";
+                    } else {
+                      echo "Não";
+                    }
+                  ?>
+                </td>
+                <td>
+                  <?php
+                    if ($t['lc'] == 'true') {
+                      echo "Sim";
+                    } else {
+                      echo "Não";
+                    }
+                  ?>
+                </td>
+                <td>
+                  <?php
+                    if ($t['lp'] == 'true') {
+                      echo "Sim";
+                    } else {
+                      echo "Não";
+                    }
+                  ?>
+                </td>
+                <td>
+                  <?php
+                    if ($t['lm'] == 'true') {
+                      echo "Sim";
+                    } else {
+                      echo "Não";
+                    }
+                  ?>
+                </td>
                 <td><?php echo $t['sha']; ?></td>
                 <td><?php echo $t['fe']; ?></td>
                 <td><?php echo $t['f']; ?></td>
@@ -102,11 +144,13 @@ $sql = "SELECT * FROM tabela ORDER BY id_tabela ASC";
                 <td>
                     <a href="alt_tabela.php?id_tabela=<?php echo $t['id_tabela']; ?>">Alterar</a>
                     <a href="del_tabela.php?id_tabela=<?php echo $t['id_tabela']; ?>">Excluir</a>
-              </td>
+                </td>
               </tr>
             <?php } ?>
           </tbody>
         </table>
-        <?php } ?>
+      </div>
+    <?php } ?>
+
   </body>
 </html>

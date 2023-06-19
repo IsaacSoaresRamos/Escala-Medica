@@ -1,7 +1,7 @@
 <?php
 require_once 'Conexao.php';
 
-session_start();
+session_start();//Inicia a seção
 
 if (empty($_SESSION)) {
   // Significa que as variáveis de SESSAO não foram definidas.
@@ -22,14 +22,22 @@ if (!empty($_GET['id_tabela'])) {
 
     $stmt->execute(array(':id_tabela' => $_GET['id_tabela']));
 
-    // Verificar se o usuário logado pode acessar/alterar as informações desse registro (id_tabela)
     if ($stmt->rowCount() == 1) {
       // Registro obtido no banco de dados
       $result = $stmt->fetchAll();
       $result = $result[0]; // Informações do registro a ser alterado
+
+      /*
+      echo '<pre>';
+      print_r($result);
+      echo '</pre>';
+      */
+      //die();
+
     }
     else {
-      header("Location: tabela.php");
+      //die("Não foi encontrado nenhum registro para id_tabela = " . $_GET['id_tabela']);
+      header("Location: tabela.php?msgErro=Você não tem permissão para acessar esta página");
       die();
     }
 
@@ -45,97 +53,120 @@ else {
 }
 
   // Redirecionar (permissão)
+
 ?>
 
-<!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Pagina de delete dos dados da Tabela</title>
+    <title>Apagar Escala</title>
   </head>
   <body>
-    <h1>Apagar dados da Tabela</h1>
+    <div class="container">
+      <h1>Apagar Escala</h1>
+      <form action="processa_tabela.php" method="post">
 
-    <form action="processa_tabela.php" method="post">
+        <div class="col-4">
+          <label for="id_serv">ID do Servidor</label>
+          <input type="text" class="" name="id_serv" id="id_serv" value="<?php echo $result['id_serv']; ?>" readonly>
+        </div>
 
-        <label for="servidor">ID do Servidor</label>
-        <input type="text" class="" name="servidor" id="servidor" value="<?php echo $result['id_serv']; ?>" readonly>
-        
-        <br><br>
+        <div class="col-4">
+          <label for="id_esp">ID da Especialidade</label>
+          <input type="text" class="" name="id_esp" id="id_esp" value="<?php echo $result['id_esp']; ?>" readonly>
+        </div>
 
-        <label for="especialidade">ID da Especialidade</label>
-        <input type="text" class="" name="especialidade" id="especialidade" value="<?php echo $result['id_esp']; ?>" readonly>
-        
-        <br><br>
+        <div class="col-4">
+          <label for="sd">SD - Servico Diurno</label>
+          <select class="form-select" name="sd" id="sd">
+            <option>Selecione o valor</option>
+            <option value="true" <?php echo $result['sd'] == true ? "selected" : "" ?>>Sim</option>
+            <option value="false" <?php echo $result['sd'] == false ? "selected" : "" ?>>Não</option>
+          </select>
+        </div>
 
-        <label for="sd">SD - Servico Diurno</label>
-        <input type="checkbox" class="" name="sd" id="sd" value="<?php echo $result['sd']; ?>" readonly>
+        <div class="col-4">
+          <label for="sv">SV - Servico Vespertino</label>
+          <select class="form-select" name="sv" id="sv">
+            <option>Selecione o valor</option>
+            <option value="true" <?php echo $result['sv'] == true ? "selected" : "" ?>>Sim</option>
+            <option value="false" <?php echo $result['sv'] == false ? "selected" : "" ?>>Não</option>
+          </select>
+        </div>
 
-        <br><br>
+        <div class="col-4">
+          <label for="lc">LC - Licenca ou Atestado Medico</label>
+          <select class="form-select" name="lc" id="lc">
+            <option>Selecione o valor</option>
+            <option value="true" <?php echo $result['lc'] == true ? "selected" : "" ?>>Sim</option>
+            <option value="false" <?php echo $result['lc'] == false ? "selected" : "" ?>>Não</option>
+          </select>
+        </div>
 
-        <label for="sv">SV - Servico Vespertino</label>
-        <input type="checkbox" class="" name="sv" id="sv" value="<?php echo $result['sv']; ?>" readonly>
+        <div class="col-4">
+          <label for="lp">LP - Licenca Premio</label>
+          <select class="form-select" name="lp" id="lp">
+            <option>Selecione o valor</option>
+            <option value="true" <?php echo $result['lp'] == true ? "selected" : "" ?>>Sim</option>
+            <option value="false" <?php echo $result['lp'] == false ? "selected" : "" ?>>Não</option>
+          </select>
+        </div>
 
-        <br><br>
+        <div class="col-4">
+          <label for="lm">LM - Licenca Maternidade</label>
+          <select class="form-select" name="lm" id="lm">
+            <option>Selecione o valor</option>
+            <option value="true" <?php echo $result['lm'] == true ? "selected" : "" ?>>Sim</option>
+            <option value="false" <?php echo $result['lm'] == false ? "selected" : "" ?>>Não</option>
+          </select>
+        </div>
 
-        <label for="lc">LC - Licenca ou Atestado Medico</label>
-        <input type="checkbox" class="" name="lc" id="lc" value="<?php echo $result['lc']; ?>" readonly>
+        <div class="col-4">
+          <label for="sha">SHA - Saldo de Horas Anteriores</label>
+          <input type="text" name="sha" id="sha" class="" value="<?php echo $result['sha']; ?>" readonly>
+        </div>
 
-        <br><br>
+        <div class="col-4">
+          <label for="fe">FE - Ferias</label>
+          <input type="text" name="fe" id="fe" class="" value="<?php echo $result['fe']; ?>" readonly>
+        </div>
 
-        <label for="lp">LP - Licenca Premio</label>
-        <input type="checkbox" class="" name="lp" id="lp" value="<?php echo $result['lp']; ?>" readonly>
+        <div class="col-4">
+          <label for="f">F - Folga</label>
+          <input type="text" name="f" id="f" class="" value="<?php echo $result['f']; ?>" readonly>
+        </div>
 
-        <br><br>
+        <div class="col-4">
+          <label for="shm">SHM - Saldo de Horas no Mes</label>
+          <input type="text" name="shm" id="shm" class="" value="<?php echo $result['shm']; ?>" readonly>
+        </div>
 
-        <label for="lm">LM - Licenca Maternidade</label>
-        <input type="checkbox" class="" name="lm" id="lm" value="<?php echo $result['lm']; ?>" readonly>
+        <div class="col-4">
+          <label for="hd">/ - 8 Horas Diarias</label>
+          <input type="text" name="hd" id="hd" class="" value="<?php echo $result['hd']; ?>" readonly>
+        </div>
 
-        <br><br>
+        <div class="col-4">
+          <label for="cht">CHT - Carga Horaria Trabalhada</label>
+          <input type="text" name="cht" id="cht" class="" value="<?php echo $result['cht']; ?>" readonly>
+        </div>
 
-        <label for="sha">SHA - Saldo de Horas Anteriores</label>
-        <input type="text" class="" name="sha" id="sha" value="<?php echo $result['sha']; ?>" readonly>
-        
-        <br><br>
+        <div class="col-4">
+          <label for="sht">SHT - Saldo de Horas Total</label>
+          <input type="text" name="sht" id="sht" class="" value="<?php echo $result['sht']; ?>" readonly>
+        </div>
 
-        <label for="fe">FE - Ferias</label>
-        <input type="text" class="" name="fe" id="fe" value="<?php echo $result['fe']; ?>" readonly>
-        
-        <br><br>
-        
-        <label for="f">F - Folga</label>
-        <input type="text" class="" name="f" id="f" value="<?php echo $result['f']; ?>" readonly>
-        
-        <br><br>
+        <div class="col-4">
+          <label for="chm">CHM - Carga Horaria do Mes</label>
+          <input type="text" name="chm" id="chm" class="" value="<?php echo $result['chm']; ?>" readonly>
+        </div>
 
-        <label for="shm">SHM - Saldo de Horas no Mes</label>
-        <input type="text" class="" name="shm" id="shm" value="<?php echo $result['shm']; ?>" readonly>
-        
-        <br><br>
+        <br />
 
-        <label for="hd">/ - 8 horas diarias</label>
-        <input type="text" class="" name="hd" id="hd" value="<?php echo $result['hd']; ?>" readonly>
-        
-        <br><br>
+        <button type="submit" name="enviarTabela" class="btn btn-primary" value="DEL">Apagar</button>
+        <a href="tabela.php" class="btn btn-danger">Cancelar</a>
 
-        <label for="cht">CHT - Carga Horaria Trabalhada</label>
-        <input type="text" class="" name="cht" id="cht" value="<?php echo $result['cht']; ?>" readonly>
-        
-        <br><br>
-
-        <label for="sht">SHT - Saldo de Horas Total</label>
-        <input type="text" class="" name="sht" id="sht" value="<?php echo $result['sht']; ?>" readonly>
-        
-        <br><br>
-
-        <label for="chm">CHM - Carga Horaria do Mes</label>
-        <input type="text" class="" name="chm" id="chm" value="<?php echo $result['chm']; ?>" readonly>
-        
-        <br><br>
-
-        <button type="submit" name="enviarDados" class="" value="DEL">Apagar</button>
-        <a href="index_logado.php" class="">Cancelar</a>
-
-    </form>
+      </form>
+    </div>
   </body>
 </html>

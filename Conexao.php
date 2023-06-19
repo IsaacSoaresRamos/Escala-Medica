@@ -7,7 +7,7 @@
 $endereco = 'localhost';
 $banco = 'escala';
 $usuario = 'postgres';
-$senha = '061102';
+$senha = '06225770186';
 
 try {
   // sgbd:host;port;dbname
