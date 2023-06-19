@@ -27,6 +27,8 @@ if (!empty($_POST)) {
         // Preparar a SQL (pdo)
         $stmt = $pdo->prepare($sql);
 
+        $dados = array(':id_tabela' => $_POST['id_tabela']);
+        $stmt -> bindParam(":id_tabela", $_POST['id_tabela']);
         // Definir os dados para SQL
         $dados = array(
           ':id_serv' => $_POST['id_serv'],
@@ -48,7 +50,7 @@ if (!empty($_POST)) {
 
         // Tentar Executar a SQL (INSERT)
         // Realizar a inserção das informações no BD (com o PHP)
-        if ($stmt->execute($dados)) {
+        if ($stmt->execute()) {
           header("Location: tabela.php?msgSucesso=Escala cadastrado com sucesso!");
         }
     } catch (PDOException $e) {
