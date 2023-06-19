@@ -65,6 +65,10 @@ else {
     <div class="container">
       <h1>Apagar Escala</h1>
       <form action="processa_tabela.php" method="post">
+        
+      
+      <label for="id_tabela">ID</label>
+      <input type="text" class="" name="id_tabela" id="id_tabela" value="<?php echo $result['id_tabela']; ?>" readonly>
 
         <div class="col-4">
           <label for="id_serv">ID do Servidor</label>

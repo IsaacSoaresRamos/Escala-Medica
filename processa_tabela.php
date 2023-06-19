@@ -119,9 +119,11 @@ if (!empty($_POST)) {
       $sql = "DELETE FROM tabela WHERE id_tabela = :id_tabela";
       $stmt = $pdo->prepare($sql);
 
-      $dados = array(':id_tabela' => $_POST['id_tabela']);
 
-      if ($stmt->execute($dados)) {
+      $dados = array(':id_tabela' => $_POST['id_tabela']);
+      $stmt -> bindParam(":id_tabela", $_POST['id_tabela']);
+
+      if ($stmt->execute()) {
         header("Location: tabela.php?msgSucesso=Escala excluída com sucesso!!");
       }
       else {

@@ -10,7 +10,11 @@ if (empty($_SESSION)) {
   die();
 }
 
-  $sql = "SELECT * FROM tabela ORDER BY id_tabela ASC";
+$sql = "SELECT t.id_tabela, t.sd, t.sv, t.lc, t.lp, t.lm, t.sha, t.fe, t.f, t.hd, t.shm, t.cht, t.sht, t.chm, t.id_serv, t.id_esp, serv.nome AS nome_serv, esp.esp AS nome_esp
+        FROM tabela t
+        INNER JOIN serv_log AS serv ON serv.id_serv = t.id_serv
+        INNER JOIN especialidade AS esp ON esp.id_esp = t.id_esp 
+        ORDER BY t.id_tabela ASC";
   try {
     $stmt = $pdo->prepare($sql);
     if ($stmt->execute()) {
@@ -64,8 +68,8 @@ if (empty($_SESSION)) {
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">ID Servidor</th>
-              <th scope="col">Id Especialidade</th>
+              <th scope="col">Nome Servidor</th>
+              <th scope="col">Especialidade</th>
               <th scope="col">SD</th>
               <th scope="col">SV</th>
               <th scope="col">LC</th>
