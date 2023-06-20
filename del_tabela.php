@@ -8,6 +8,9 @@ if (empty($_SESSION)) {
   // Não poderia acessar aqui.
   header("Location: index.php?msgErro=Você precisa se autenticar no sistema.");
   die();
+}elseif ($_SESSION['adm'] == 'NAO'){
+  header("Location: index_logado_serv.php?msgErro=Você não tem permição de acessar essa pagina");
+  die();
 }
 
 $result = array();

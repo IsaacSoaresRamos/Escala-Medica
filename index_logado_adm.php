@@ -9,6 +9,10 @@ if (empty($_SESSION)) {
   header("Location: index.php?msgErro=Você precisa se autenticar no sistema.");
   die();
 }
+elseif ($_SESSION['adm'] == 'NAO'){
+  header("Location: index_logado_serv.php");
+  die();
+}
 
 $sql = "SELECT * FROM serv_log ORDER BY id_serv ASC";
   try {
@@ -47,16 +51,20 @@ $sql = "SELECT * FROM serv_log ORDER BY id_serv ASC";
     <div>
       <a href="Logout.php" class="">Sair</a>
     </div>
+    
+    <h2>Olá <i><?php echo $_SESSION['nome']; ?></i>, seja bem-vindo(a)!</h2>
+    
     <div>
       <a href="list_esp.php" class="">Listar Especialidades</a>
     </div>
-    
-    <h2>Olá <i><?php echo $_SESSION['nome']; ?></i>, seja bem-vindo(a)!</h2>
+    <div>
+      <a href="tabela_adm.php" class="">Escala Medica</a>
+    </div>
 
     <h3>Listagem de servidores</h3>
     
     <a href="cad_serv.php" class="">Cadastrar Servidor</a>
-    
+
     <?php if (!empty($servidores)) { ?>
       <!-- Aqui que será montada a tabela com a relação de servidores!! -->
 

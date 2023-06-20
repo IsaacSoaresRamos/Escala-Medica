@@ -7,7 +7,7 @@ if (!empty($_POST)) {
   session_start();
   try {
     // Montar a SQL
-    $sql = "SELECT nome, email, matricula, cpf FROM serv_log WHERE matricula = :matricula AND senha = :senha";
+    $sql = "SELECT nome, email, matricula, cpf, adm FROM serv_log WHERE matricula = :matricula AND senha = :senha";
 
     // Preparar a SQL (pdo)
     $stmt = $pdo->prepare($sql);

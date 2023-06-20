@@ -24,6 +24,7 @@ if (!empty($_POST)) {
                 cpf = :cpf,
                 matricula = :matricula,
                 email = :email,
+                adm = :adm,
                 senha = :senha
               WHERE
                 id_serv = :id_serv";
@@ -35,6 +36,7 @@ if (!empty($_POST)) {
         ':cpf' => $_POST['cpf'],
         ':matricula' => $_POST['matricula'],
         ':email' => $_POST['email'],
+        ':adm' =>$_POST['adm'],
         ':senha' => sha1($_POST['senha'])
       );
 

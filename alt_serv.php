@@ -8,6 +8,9 @@ if (empty($_SESSION)) {
   // Não poderia acessar aqui.
   header("Location: index.php?msgErro=Você precisa se autenticar no sistema.");
   die();
+}elseif ($_SESSION['adm'] == 'NAO'){
+  header("Location: index_logado_serv.php?msgErro=Você não tem permição de acessar essa pagina");
+  die();
 }
 
 
@@ -76,6 +79,17 @@ else {
 
         <label for="email">Email</label>
         <input type="text" class="" name="email" id="email" value="<?php echo $result['email']; ?>" >
+
+        <br><br>
+
+        <div class="col-4">
+          <label for="adm">Adiministrador</label>
+          <select class="form-select" name="adm" id="adm">
+            <option>Selecione o valor</option>
+            <option value="SIM" <?php echo $result['adm'] == "SIM" ? "selected" : "" ?>>Sim</option>
+            <option value="NAO" <?php echo $result['adm'] == "NAO" ? "selected" : "" ?>>Não</option>
+          </select>
+        </div>
 
         <br><br>
 

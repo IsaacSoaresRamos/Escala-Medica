@@ -56,6 +56,9 @@ $sql = "SELECT t.id_tabela, t.sd, t.sv, t.lc, t.lp, t.lm, t.sha, t.fe, t.f, t.hd
       <div class="col-md-11">
         <h2 class="title">Olá seja bem-vindo(a) a Escala Médica!</h2>
       </div>
+      <div class="container">
+      <a href="index_logado_serv.php" class="btn btn-primary">Voltar</a>
+    </div>
     </div>
 
 

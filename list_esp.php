@@ -8,6 +8,9 @@ if (empty($_SESSION)) {
   // Não poderia acessar aqui.
   header("Location: index.php?msgErro=Você precisa se autenticar no sistema.");
   die();
+}elseif ($_SESSION['adm'] == 'NAO'){
+  header("Location: index_logado_serv.php?msgErro=Você não tem permição de acessar essa pagina");
+  die();
 }
 
 $sql = "SELECT * FROM especialidade ORDER BY id_esp ASC";
@@ -43,11 +46,10 @@ $sql = "SELECT * FROM especialidade ORDER BY id_esp ASC";
       echo $_GET['msgSucesso'];
     }
     ?>
-
+    
     <div>
       <a href="index_logado_adm.php" class="">Voltar</a>
     </div>
-    
     <h3>Listagem de Espacialidades</h3>
     <?php if (!empty($esp)) { ?>
       <!-- Aqui que será montada a tabela com a relação de especialidades!! -->

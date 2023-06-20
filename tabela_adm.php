@@ -8,6 +8,9 @@ if (empty($_SESSION)) {
   // Não poderia acessar aqui.
   header("Location: index.php?msgErro=Você precisa se autenticar no sistema.");
   die();
+}elseif ($_SESSION['adm'] == 'NAO'){
+  header("Location: index_logado_serv.php?msgErro=Você não tem permição de acessar essa pagina");
+  die();
 }
 
 $sql = "SELECT t.id_tabela, t.sd, t.sv, t.lc, t.lp, t.lm, t.sha, t.fe, t.f, t.hd, t.shm, t.cht, t.sht, t.chm, t.id_serv, t.id_esp, serv.nome AS nome_serv, esp.esp AS nome_esp
@@ -59,6 +62,9 @@ $sql = "SELECT t.id_tabela, t.sd, t.sv, t.lc, t.lp, t.lm, t.sha, t.fe, t.f, t.hd
     </div>
     <div class="container">
       <a href="cad_tabela.php" class="btn btn-primary">Nova Escala</a>
+    </div>
+    <div class="container">
+      <a href="index_logado_adm.php" class="btn btn-primary">Voltar</a>
     </div>
 
     <?php if (!empty($tabelas)) { ?>

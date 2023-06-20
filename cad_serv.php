@@ -9,6 +9,7 @@ if (empty($_SESSION)) {
   header("Location: index.php?msgErro=Você precisa se autenticar no sistema.");
   die();
 }
+
 ?>
 
 <html>
@@ -33,8 +34,8 @@ if (empty($_SESSION)) {
             <label for="adm">Adiministrador</label>
             <select class="form-select" name="adm" id="adm">
                 <option selected>Selecione o Valor </option>
-                <option value="true">Sim</option>
-                <option value="false">Não</option>
+                <option value="SIM">Sim</option>
+                <option value="NAO">Não</option>
             </select>
             <br>
             <label for="senha">Senha</label>

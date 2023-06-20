@@ -20,15 +20,13 @@ if (!empty($_POST)) {
       // Preparar as informações
         // Montar a SQL (pgsql)
         $sql = "INSERT INTO tabela
-                  (id_serv, id_esp, sd, sv, lc, lp, lm, sha, fe, f, shm, hd, cht, sht, chm)
+                  ( id_serv, id_esp, sd, sv, lc, lp, lm, sha, fe, f, shm, hd, cht, sht, chm)
                 VALUES
-                  (:id_serv, :id_esp, :sd, :sv, :lc, :lp, :lm, :sha, :fe, :f, :shm, :hd, :cht, :sht, :chm)";
+                  ( :id_serv, :id_esp, :sd, :sv, :lc, :lp, :lm, :sha, :fe, :f, :shm, :hd, :cht, :sht, :chm)";
 
         // Preparar a SQL (pdo)
         $stmt = $pdo->prepare($sql);
 
-        $dados = array(':id_tabela' => $_POST['id_tabela']);
-        $stmt -> bindParam(":id_tabela", $_POST['id_tabela']);
         // Definir os dados para SQL
         $dados = array(
           ':id_serv' => $_POST['id_serv'],
@@ -50,7 +48,7 @@ if (!empty($_POST)) {
 
         // Tentar Executar a SQL (INSERT)
         // Realizar a inserção das informações no BD (com o PHP)
-        if ($stmt->execute()) {
+        if ($stmt->execute($dados)) {
           header("Location: tabela_adm.php?msgSucesso=Escala cadastrado com sucesso!");
         }
     } catch (PDOException $e) {
