@@ -54,10 +54,12 @@ $sql = "SELECT * FROM serv_log ORDER BY id_serv ASC";
     <h2>Olá <i><?php echo $_SESSION['nome']; ?></i>, seja bem-vindo(a)!</h2>
 
     <h3>Listagem de servidores</h3>
+    
+    <a href="cad_serv.php" class="">Cadastrar Servidor</a>
+    
     <?php if (!empty($servidores)) { ?>
       <!-- Aqui que será montada a tabela com a relação de servidores!! -->
 
-      <a href="cad_serv.php" class="">Cadastrar Servidor</a>
       
       <br><br>
       

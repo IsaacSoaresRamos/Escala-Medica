@@ -42,14 +42,14 @@ if (!empty($_POST)) {
 
       // Executar SQL
       if ($stmt->execute($dados)) {
-        header("Location: index_logado.php?msgSucesso=Alteração realizada com sucesso!!");
+        header("Location: index_logado_adm.php?msgSucesso=Alteração realizada com sucesso!!");
       }
       else {
-        header("Location: index_logado.php?msgErro=Falha ao ALTERAR servidor..");
+        header("Location: index_logado_adm.php?msgErro=Falha ao ALTERAR servidor..");
       }
     } catch (PDOException $e) {
       //die($e->getMessage());
-      header("Location: index_logado.php?msgErro=Falha ao ALTERAR servidor..");
+      header("Location: index_logado_adm.php?msgErro=Falha ao ALTERAR servidor..");
     }
   }
   elseif ($_POST['enviarDados'] == 'DEL') { // EXCLUIR!!!
@@ -59,23 +59,24 @@ if (!empty($_POST)) {
       $stmt = $pdo->prepare($sql);
 
       $dados = array(':id_serv' => $_POST['id_serv']);
+      $stmt -> bindParam(":id_serv", $_POST['id_serv']);
 
-      if ($stmt->execute($dados)) {
-        header("Location: index_logado.php?msgSucesso=Servidor excluído com sucesso!!");
+      if ($stmt->execute()) {
+        header("Location: index_logado_adm.php?msgSucesso=Servidor excluído com sucesso!!");
       }
       else {
-        header("Location: index_logado.php?msgSucesso=Falha ao EXCLUIR servidor..");
+        header("Location: index_logado_adm.php?msgSucesso=Falha ao EXCLUIR servidor..");
       }
     } catch (PDOException $e) {
-      header("Location: index_logado.php?msgSucesso=Falha ao EXCLUIR servidor..");
+      header("Location: index_logado_adm.php?msgSucesso=Falha ao EXCLUIR servidor..");
     }
   }
   else {
-    header("Location: index_logado.php?msgErro=Erro de acesso (Operação não definida).");
+    header("Location: index_logado_adm.php?msgErro=Erro de acesso (Operação não definida).");
   }
 }
 else {
-  header("Location: index_logado.php?msgErro=Erro de acesso.");
+  header("Location: index_logado_adm.php?msgErro=Erro de acesso.");
 }
 die();
 

@@ -167,7 +167,7 @@ else {
         <br />
 
         <button type="submit" name="enviarTabela" class="btn btn-primary" value="DEL">Apagar</button>
-        <a href="tabela.php" class="btn btn-danger">Cancelar</a>
+        <a href="tabela_adm.php" class="btn btn-danger">Cancelar</a>
 
       </form>
     </div>

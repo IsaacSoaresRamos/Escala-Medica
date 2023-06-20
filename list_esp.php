@@ -45,7 +45,7 @@ $sql = "SELECT * FROM especialidade ORDER BY id_esp ASC";
     ?>
 
     <div>
-      <a href="index_logado.php" class="">Voltar</a>
+      <a href="index_logado_adm.php" class="">Voltar</a>
     </div>
     
     <h3>Listagem de Espacialidades</h3>

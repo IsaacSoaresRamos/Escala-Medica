@@ -55,10 +55,9 @@ else {
 
     <form action="processa_serv.php" method="post">
 
-        <label for="id_serv">ID</label>
-        <input type="text" class="" name="id_serv" id="id_anuncio" value="<?php echo $result['id_serv']; ?>" readonly>
+        <label for="id_serv"></label>
+        <input type="hidden" class="" name="id_serv" id="id_anuncio" value="<?php echo $result['id_serv']; ?>" readonly>
         
-        <br><br>
 
         <label for="nome">Nome</label>
         <input type="text" class="" name="nome" id="nome" value="<?php echo $result['nome']; ?>" >
@@ -86,7 +85,7 @@ else {
         <br><br>
 
         <button type="submit" name="enviarDados" class="" value="ALT">Alterar</button>
-        <a href="index_logado.php" class="">Cancelar</a>
+        <a href="index_logado_adm.php" class="">Cancelar</a>
 
     </form>
   </body>

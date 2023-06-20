@@ -1,4 +1,4 @@
-<<?php 
+<?php 
 require_once 'Conexao.php'; //Puxa a conexão do banco
 
 session_start();//Inicia a seção

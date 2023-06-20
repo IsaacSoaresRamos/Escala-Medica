@@ -30,9 +30,10 @@ if (!empty($_POST)) {
       $_SESSION['email'] = $result['email'];
       $_SESSION['matricula'] = $result['matricula'];
       $_SESSION['cpf'] = $result['cpf'];
+      $_SESSION['adm'] = $result['adm'];
 
       // Redirecionar p/ página inicial (ambiente logado)
-      header("Location: index_logado.php");
+      header("Location: index_logado_adm.php");
 
     } else { // Signifca que o resultado da consulta SQL não trouxe nenhum registro
       // Falha na autenticaçao

@@ -25,7 +25,6 @@
                     <input type="password" name="senha" id="senha" class="">
                 <br>
                 <button type="submit" name="enviarDaos" class="">Entrar</button>
-                <a href="cad_serv.php" class="">Cadastre-se</a>
             </form>
     </body>
 </html>

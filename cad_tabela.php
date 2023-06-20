@@ -86,7 +86,7 @@ if (empty($_SESSION)) {
             <input type="text" name="chm" id="chm" class="">
             <br>
             <button type="submit" name="enviarTabela" value="CAD" class="">Cadastrar</button>
-            <a href="tabela.php" class="">Cancelar</a>
+            <a href="tabela_adm.php" class="">Cancelar</a>
         </form>
     </body>
 </html>

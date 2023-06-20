@@ -1,4 +1,4 @@
-<<?php 
+<?php 
 require_once 'Conexao.php'; //Puxa a conexão do banco
 
 session_start();//Inicia a seção
@@ -30,11 +30,18 @@ if (empty($_SESSION)) {
             <label for="email">E-mail</label>
             <input type="email" name="email" id="email" class="">
             <br>
+            <label for="adm">Adiministrador</label>
+            <select class="form-select" name="adm" id="adm">
+                <option selected>Selecione o Valor </option>
+                <option value="true">Sim</option>
+                <option value="false">Não</option>
+            </select>
+            <br>
             <label for="senha">Senha</label>
             <input type="password" name="senha" id="senha" class="">
             <br>
             <button type="submit" name="enviarDados" class="">Cadastrar</button>
-            <a href="index.php" class="">Cancelar</a>
+            <a href="index_logado_adm.php" class="">Cancelar</a>
         </form>
     </body>
 </html>

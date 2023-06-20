@@ -84,7 +84,7 @@ else {
         <br><br>
 
         <button type="submit" name="enviarDados" class="" value="DEL">Apagar</button>
-        <a href="index_logado.php" class="">Cancelar</a>
+        <a href="index_logado_adm.php" class="">Cancelar</a>
 
     </form>
   </body>

@@ -54,10 +54,9 @@ else {
 
     <form action="Processa_esp.php" method="post">
 
-        <label for="id_esp">ID</label>
-        <input type="text" class="" name="id_esp" id="id_esp" value="<?php echo $result['id_esp']; ?>" readonly>
-        
-        <br><br>
+        <label for="id_esp"></label>
+        <input type="hidden" class="" name="id_esp" id="id_esp" value="<?php echo $result['id_esp']; ?>" readonly>
+
 
         <label for="esp">Especialidade</label>
         <input type="text" class="" name="esp" id="esp" value="<?php echo $result['esp']; ?>" >

@@ -51,11 +51,11 @@ if (!empty($_POST)) {
         // Tentar Executar a SQL (INSERT)
         // Realizar a inserção das informações no BD (com o PHP)
         if ($stmt->execute()) {
-          header("Location: tabela.php?msgSucesso=Escala cadastrado com sucesso!");
+          header("Location: tabela_adm.php?msgSucesso=Escala cadastrado com sucesso!");
         }
     } catch (PDOException $e) {
         die($e->getMessage());
-        header("Location: tabela.php?msgErro=Falha ao cadastrar a escala..");
+        header("Location: tabela_adm.php?msgErro=Falha ao cadastrar a escala..");
     }
   }
   elseif ($_POST['enviarTabela'] == 'ALT') { // ALTERAR!!!
@@ -103,14 +103,14 @@ if (!empty($_POST)) {
 
       // Executar SQL
       if ($stmt->execute($dados)) {
-        header("Location: tabela.php?msgSucesso=Alteração realizada com sucesso!!");
+        header("Location: tabela_adm.php?msgSucesso=Alteração realizada com sucesso!!");
       }
       else {
-        header("Location: tabela.php?msgErro=Falha ao ALTERAR escala..");
+        header("Location: tabela_adm.php?msgErro=Falha ao ALTERAR escala..");
       }
     } catch (PDOException $e) {
       //die($e->getMessage());
-      header("Location: tabela.php?msgErro=Falha ao ALTERAR escala..");
+      header("Location: tabela_adm.php?msgErro=Falha ao ALTERAR escala..");
     }
 
   }
@@ -126,22 +126,22 @@ if (!empty($_POST)) {
       $stmt -> bindParam(":id_tabela", $_POST['id_tabela']);
 
       if ($stmt->execute()) {
-        header("Location: tabela.php?msgSucesso=Escala excluída com sucesso!!");
+        header("Location: tabela_adm.php?msgSucesso=Escala excluída com sucesso!!");
       }
       else {
-        header("Location: tabela.php?msgSucesso=Falha ao EXCLUIR escala..");
+        header("Location: tabela_adm.php?msgSucesso=Falha ao EXCLUIR escala..");
       }
     } catch (PDOException $e) {
       //die($e->getMessage());
-      header("Location: tabela.php?msgSucesso=Falha ao EXCLUIR escala..");
+      header("Location: tabela_adm.php?msgSucesso=Falha ao EXCLUIR escala..");
     }
   }
   else {
-    header("Location: tabela.php?msgErro=Erro de acesso (Operação não definida).");
+    header("Location: tabela_adm.php?msgErro=Erro de acesso (Operação não definida).");
   }
 }
 else {
-  header("Location: tabela.php?msgErro=Erro de acesso.");
+  header("Location: tabela_adm.php?msgErro=Erro de acesso.");
 }
 die();
 
