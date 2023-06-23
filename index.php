@@ -33,7 +33,7 @@
                 <div class="packge-menu">
                     <section class="pack-menu">
                         <a href="index.php"><p type="button">Inicio</p>
-                        <a href="sobrenos.php"><p type="button" >Sobre</p></a>
+                        <a href="sobre.php"><p type="button" >Sobre</p></a>
                         </section>
                 </div>
             </nav>

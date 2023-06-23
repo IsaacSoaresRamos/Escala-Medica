@@ -1,0 +1,123 @@
+* { /* Configuração Geral */
+    padding: 0px;
+    margin: 0px;;
+    font-family: Arial, sans-serif;}
+:root{ /* Tabela de Cores */
+    --color-Branco: #ffffff;
+    --color-Amarelo: #d6b619;
+    --color-AzulEscuro: #052b348f;
+    --color-VerdeAgua: #06b88e; /* OK */
+    --color-Verde: #54d65e;
+
+    --color-Menu: #122024;
+    --color-MenuI: #35535b;
+    --color-Texto: #174d44;
+    --color-Fundo: #59e2cb8d;
+    --color-Caixa: #06b88f59;
+    --color-SombraMenu: #317c6bab;
+    --color-Transparente: #317c6a00;
+    --color-TextoMenu: #8cb9f083;}
+
+.wallpaper { 
+    background: var(--color-Fundo);}
+    .wallpaper::-webkit-scrollbar {
+        display: none;}
+.hdr {
+    background-color: var(--color-Menu);}
+
+.hdr {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 4rem;
+    background-color: var(--color-Menu);}
+
+.logo img {
+    margin-left: 1rem;
+    margin-top:  .1rem;}
+
+.packge-menu {
+    position: relative;
+    float: right;
+    margin-top: -3.6rem;}
+
+.pack-menu p {
+    display: inline-block;
+    color: var(--color-MenuI);
+    padding-right: 1rem;}
+    .pack-menu a {
+        border: none;
+        text-decoration: none;
+        letter-spacing: 2px;
+        background-color: var(--color-Menu);}
+        .pack-menu p:hover {
+            color: var(--color-VerdeAgua);
+            background-color: var(--color-Menu);}
+    .pack-menu button {
+        border: none;
+        border-radius: 3px;
+        font-weight: 600;
+        color: var(--color-VerdeAgua);
+        background-color: var(--color-Menu);}
+        .pack-menu button:hover {
+            transition: 0.5s;
+            color: var(--color-Amarelo);}
+.link-login {
+    display: inherit;
+    margin-left: 65rem;
+    margin-top: -2.5rem;
+    margin-right: 4rem;}
+    
+/* Conteudo */   
+.packege{
+    padding: 2rem;
+    margin: 0px auto;}
+.titulo {
+    z-index: 999;
+    width: 450px;
+    font-size: 25pt;
+    font-weight: 600;
+    margin: 0px auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    padding-left: .5rem;
+    color: var(--color-Texto);
+    border-bottom: .1rem solid var(--color-Texto); 
+    text-shadow: var(--color-SombraMenu) 0.1em 0.1em 0.2em;}
+.pack-texto {
+    max-width: 100%;
+    height: 320px;
+    padding: 2rem;
+    margin: 0px auto;
+    margin-top: 2.5rem;
+    color:  var(--color-Texto);
+    background-color: var(--color-Caixa);
+    box-shadow: 0px 0px 66px 1px var(--color-MenuI);}
+    .packege p {
+        width: 620px;
+        margin-top: 3.5rem;
+        font-size: 14pt;
+        text-align: center;
+        color: var(--color-Menu);}
+
+.pack-dev {
+    width: 300px;
+    float: right;
+    margin-top: -12rem;
+    margin-right: 5rem;
+    padding: 3rem;
+    font-size: 11pt;
+    border-radius: 100%;
+    background-color: var(--color-Texto);}
+    .pack-dev h3 {
+        font-size: 16pt;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        margin-left: 1.2rem;
+        color: var(--color-Branco);}
+    .pack-dev p {
+        margin: 10px;
+        padding-right: 27rem;
+        text-shadow: none;
+        color: var(--color-Branco);}
