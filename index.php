@@ -44,7 +44,7 @@
             <div class="row justify-content-center mt-5">  <!-- Coluna do Bootstrap | classe externa Bootstrap-->
                 <div class="packege"> <!-- Tela de Login | classe interna-->
                     <section>
-                        <form class="form-login" action="loginConfig.php" method="post"> <!-- Formulario de Login| Classe Interna-->
+                        <form class="form-login" action="Processa_log.php" method="post"> <!-- Formulario de Login| Classe Interna-->
                             <!-- Matricúla / Senha | classe interna-->
                             <div class="packege-inputs">             
                                         <div class="input-group mb-3">
