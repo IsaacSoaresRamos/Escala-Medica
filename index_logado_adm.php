@@ -3,16 +3,16 @@ require_once 'Conexao.php'; //Puxa a conexão do banco
 
 session_start();//Inicia a seção
 
-if (empty($_SESSION)) {
+//if (empty($_SESSION)) {
   // Significa que as variáveis de SESSAO não foram definidas.
   // Não poderia acessar aqui.
-  header("Location: index.php?msgErro=Você precisa se autenticar no sistema.");
-  die();
-}
-elseif ($_SESSION['adm'] == 'NAO'){
-  header("Location: index_logado_serv.php");
-  die();
-}
+  //header("Location: index.php?msgErro=Você precisa se autenticar no sistema.");
+  //die();
+//}
+//elseif ($_SESSION['adm'] == 'NAO'){
+  //header("Location: index_logado_serv.php");
+  //die();
+//}
 
 $sql = "SELECT * FROM serv_log ORDER BY id_serv ASC";
   try {
@@ -72,7 +72,7 @@ $sql = "SELECT * FROM serv_log ORDER BY id_serv ASC";
       <br><br>
       
       <table>
-          <thead>
+          <thead> 
             <tr>
               <th scope="col">#</th>
               <th scope="col">Nome</th>

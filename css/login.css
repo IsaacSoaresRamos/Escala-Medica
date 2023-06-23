@@ -1,0 +1,136 @@
+/* Configuração Geral */
+* { 
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, sans-serif;}
+/* Tabela de Cores */
+:root{ 
+    --color-Amarelo: #deb147;
+    --color-AzulEscuro: #052b348f;
+    --color-Branco: #ffffff;
+    --color-CaixaLogin: #052b3450;
+    --color-FundoBotao: #59e2cb8d;
+    --color-Menu: #122024;
+    --color-MenuI: #35535b;
+    --color-Sombra: #5a7c74;
+    --color-SombraMenu: #368a76;
+    --color-VerdeAgua: #06b88e; }
+
+
+/* Body */
+.wallpaper { 
+    background: rgb(89,226,204);
+    background: linear-gradient(0deg, rgba(89,226,204,1) 7%, rgba(59,166,163,1) 60%, rgba(26,108,97,1) 99%);}
+
+/* Barra Superior - Menu */
+.hdr {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 4rem;
+    background-color: var(--color-Menu);}
+.logo img {
+    margin-left: 1rem;
+    margin-top:  .1rem;}
+.packge-menu {
+    position: relative;
+    margin-top: -3.6rem;
+    margin-left: 7rem;}
+.pack-menu p {
+    padding-inline: 1rem;
+    display: inline-block;}
+    .pack-menu a {
+        border: none;
+        color: var(--color-MenuI);
+        text-decoration: none;
+        letter-spacing: 2px;
+        background-color: var(--color-Menu);}
+        .pack-menu a:hover {
+            transition: 0.5s;
+            color: var(--color-VerdeAgua);
+            background-color: var(--color-Menu);}
+    .pack-menu button {
+        border: none;
+        border-radius: 3px;
+        font-weight: 600;
+        color: var(--color-VerdeAgua);
+        background-color: var(--color-Menu);}
+        .pack-menu button:hover {
+            transition: 0.5s;
+            cursor: pointer;
+            color: var(--color-Amarelo);}
+.link-login {
+    display: inherit;
+    margin-left: 65rem;
+    margin-top: -2.5rem;
+    margin-right: 4rem;}
+
+/* Conteudo */
+.titulo {
+    font-size: 30pt;
+    margin-top: 8rem;
+    margin-bottom: -3rem;
+    margin-left: 31rem;
+    padding: 1rem;
+    color: var(--color-Branco); 
+    text-shadow: var(--color-AzulEscuro) 0.1em 0.1em 0.2em}
+.packege {
+    float: right;
+    height: 290px;
+    padding: 24px;
+    margin-bottom: 2rem;
+    background-color: var(--color-Transparente);}
+    .packege a {
+        text-decoration: none;}
+.packege-inputs {
+    font-size: 12pt;
+    text-align: center;
+    margin-left: .5rem;}
+    .input-group span {
+        font-size: 15pt;
+        border: .1rem solid var(--color-Menu);
+        color: var(--color-Branco);
+        background-color: var(--color-Menu);
+        z-index: 999;}
+    .input-group input {
+        z-index: 1;
+        height: 45px;
+        margin-left: -.2rem;
+        border: .1rem solid var(--color-Menu);
+        background-color: var(--color-Transparente);}
+        .input-group input:hover {
+            transition: 0.5s;
+            letter-spacing: .2rem;
+            background-color: var(--color-FundoBotao);}
+        .input-group input::placeholder {
+            color: var(--color-Branco);
+            font-size: 10pt;}
+        .btn-entrar input {
+            width: 250px;
+            margin-left: .5rem;
+            border: none;
+            border-radius: 4px;
+            color: var(--color-Menu);
+            border: 1.5px solid var(--color-Menu);
+            background-color: var(--color-Transparente);}
+            .btn-entrar input:hover {
+                transition: 0.5s;
+                letter-spacing: .2rem;
+                box-shadow: 0 0 1em var(--color-MenuI);
+                background-color: var(--color-FundoBotao);}
+
+.recuperar {
+    margin: -50px auto 67px 560px;}
+    .recuperar a {
+        color: var(--color-MenuI); }
+    .recuperar label {
+        color: var(--color-MenuI);}
+    .recuperar button {
+        border: none;
+        margin-left: 40px;
+        color: var(--color-AzulMedio);
+        background-color: var(--color-Transparente);}
+        .recuperar button:hover {
+            cursor: pointer;
+            transition: 0.8s;
+            color: var(--color-SombraMenu);}
