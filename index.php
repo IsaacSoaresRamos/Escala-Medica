@@ -69,13 +69,5 @@
                     </div> <!-- Fim class login -->
                 </div> <!-- Fim class row -->    
             </div> <!-- Fim class container -->
-
-            <section><!-- Seção Recuperar senha | classe interna-->
-                <div class="recuperar">
-                    <label for="recup">Esqueceu sua senha?</label>
-                    <br/>
-                    <a href="recsenha.php"><button>Clique aqui!</button></a>
-                </div>
-            </section>
     </body>
 </html>

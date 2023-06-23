@@ -88,6 +88,7 @@ $sql = "SELECT * FROM serv_log ORDER BY id_serv ASC";
           <span class="material-symbols-outlined icon-search">search</span>
         </a>
       </button>
+                  
       <?php if (!empty($servidores)) { ?>
         <!-- Aqui que será montada a tabela com a relação de servidores!! -->
         
@@ -113,11 +114,13 @@ $sql = "SELECT * FROM serv_log ORDER BY id_serv ASC";
                   <td><?php echo $s['matricula']; ?></td>
                   <td><?php echo $s['email']; ?></td>
                   <td>
-                    <div class="btn-edit">
-                        <a href="alt_serv.php?id_serv=<?php echo $s['id_serv']; ?>"><span class="material-symbols-outlined">edit</span></a>
-                    </div>
-                    <div class="btn-del">
-                        <a href="del_serv.php?id_serv=<?php echo $s['id_serv']; ?>"><span class="material-symbols-outlined">delete</span></a>
+                    <div class="icons-acao">
+                      <div class="btn-edit">
+                          <a href="alt_serv.php?id_serv=<?php echo $s['id_serv']; ?>"><span class="material-symbols-outlined icon-edit">edit</span></a>
+                      </div>
+                      <div class="btn-del">
+                          <a href="del_serv.php?id_serv=<?php echo $s['id_serv']; ?>"><span class="material-symbols-outlined icon-del">delete</span></a>
+                      </div>
                     </div>
                   </td>
                 </tr>

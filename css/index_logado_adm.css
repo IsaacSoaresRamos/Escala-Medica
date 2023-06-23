@@ -8,7 +8,7 @@
 :root{ 
     --color-Branco: #ffffff;
     --color-Amarelo: #ffda82e6;
-    --color-AzulClaro: rgb(0, 221, 255);
+    --color-AzulClaro: #00ddff;
     --color-Vermelho: #f15454;
     --color-AzulEscuro: #052b348f;
     --color-VerdeAgua: #06b88e; /* OK */
@@ -138,39 +138,23 @@
         color: var(--color-Menu);
         background-color: var(--color-Amarelo);
         box-shadow: 0px 0px 10px 3px var(--color-Amarelo);}
-
-
-.btn-edit {
-    top: 90%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);}
-    .btn-edit a {
-        width: 100px;
-        margin-top: .5rem;
-        color: var(--color-Branco);}
-        .btn-edit a:hover {
+    
+.icons-acao {
+    display: flex;
+    padding-inline: 1rem;}
+.btn-edit a{
+    color: var(--color-Branco);}    
+    .btn-del a{
+        color: var(--color-Branco);}  
+        .btn-edit span:hover {
             transition: .5s;
-            border-radius: .2rem;
-            color: var(--color-Branco);
-            border: .1rem solid var(--color-SombraMenu);
-            background-color: var(--color-SombraMenu);
-            box-shadow: 0px 0px 20px 1px var(--color-SombraMenu);}
-            .btn-edit span:hover {
-                transition: .5s;
-                color: var(--color-AzulClaro);}
-
-.btn-del {
-    top: 90%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);}
-    .btn-del a {
-        width: 100px;
-        margin-top: .5rem;
-        color: var(--color-Branco);}
+            color: var(--color-AzulClaro);}
         .btn-del span:hover {
             color: var(--color-Vermelho);}
+
+
+
+
 /*------ Inputs Legenda ------*/
 .container-check {
     font-size: 10pt;
