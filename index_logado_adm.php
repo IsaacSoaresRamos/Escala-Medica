@@ -65,7 +65,6 @@ $sql = "SELECT * FROM serv_log ORDER BY id_serv ASC";
           <nav class="menu"> <!--Menu-->
               <div class="packge-menu">
                   <section class="pack-menu">
-                      <a href="index.php"><p type="button">Inicio</p></a>
                       <a href="tabela_adm.php"><p type="button">Escala</p></a>
                       <a href="cad_serv.php"><p type="button">Cadastro</p></a>
                       <a href="list_esp.php" class="">Especialidades</a>
