@@ -10,10 +10,10 @@ if (empty($_SESSION)) {
   die();
 }
 
-$sql = "SELECT t.id_tabela, t.sd, t.sv, t.lc, t.lp, t.lm, t.sha, t.fe, t.f, t.hd, t.shm, t.cht, t.sht, t.chm, t.id_serv, t.id_esp, serv.nome AS nome_serv, esp.esp AS nome_esp
+$sql = "SELECT t.id_tabela, t.sd, t.sv, t.lc, t.lp, t.lm, t.sha, t.fe, t.f, t.hd, t.shm, t.cht, t.sht, t.chm, t.id_serv, t.id_esp, serv.nome, esp.esp
         FROM tabela t
-        INNER JOIN serv_log AS serv ON serv.id_serv = t.id_serv
-        INNER JOIN especialidade AS esp ON esp.id_esp = t.id_esp 
+        INNER JOIN serv_log AS serv ON t.id_serv = serv.id_serv
+        INNER JOIN especialidade AS esp ON t.id_esp = esp.id_esp
         ORDER BY t.id_tabela ASC";
   try {
     $stmt = $pdo->prepare($sql);
@@ -90,8 +90,8 @@ $sql = "SELECT t.id_tabela, t.sd, t.sv, t.lc, t.lp, t.lm, t.sha, t.fe, t.f, t.hd
             <?php foreach ($tabelas as $t) { ?>
               <tr>
                 <th scope="row"><?php echo $t['id_tabela']; ?></th>
-                <td><?php echo $t['id_serv']; ?></td>
-                <td><?php echo $t['id_esp']; ?></td>
+                <td><?php echo $t['nome']; ?></td>
+                <td><?php echo $t['esp']; ?></td>
                 <td>
                   <?php
                     if ($t['sd'] == 'true') {

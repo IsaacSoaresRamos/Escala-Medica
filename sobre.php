@@ -38,7 +38,7 @@
                
                     <div class="pack-dev">
                          <h3>Desenvolvedores</h3>
-                         <p>Guilherme Souza</p>
+                         <p>Guilherme Sousa</p>
                          <p>Isaac Soares</p>
                          <p>Luy Mattos</p>
                     </div>
