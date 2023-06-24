@@ -1,0 +1,114 @@
+/* Configuração Geral */
+* { 
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, sans-serif;}
+/* Tabela de Cores */
+:root{ 
+    --color-Amarelo: #deb147;
+    --color-AzulEscuro: #052b348f;
+    --color-AzulClaro: #00ddff;
+    --color-Branco: #ffffff;
+    --color-Caixa: #052b34b7;
+    --color-Menu: #122024;
+    --color-Fundo: #b7fff1;
+    --color-MenuI: #35535b;
+    --color-SombraMenu: #7fcfbc;
+    --color-Transparente: #00000000; 
+    --color-VerdeAgua: #06b88e; 
+    --color-Verde: #54d65e;
+    --color-Vermelho: #f15454;}
+
+/* Body */
+.wallpaper { 
+    background-color: var(--color-Fundo);}
+    .wallpaper::-webkit-scrollbar {
+        display: none;}
+
+/* Barra Superior - Menu */
+.hdr {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 4rem;
+    background-color: var(--color-Menu);}
+
+.logo img {
+    margin-left: 1rem;
+    margin-top:  .1rem;}
+
+.packge-menu {
+    position: relative;
+    float: right;
+    margin-top: -3.6rem;}
+
+.pack-menu p {
+    display: inline-block;
+    padding-right: 1rem;}
+    .pack-menu a {
+        border: none;
+        color: var(--color-MenuI);
+        text-decoration: none;
+        letter-spacing: 2px;
+        background-color: var(--color-Menu);}
+        .pack-menu a:hover {
+            color: var(--color-VerdeAgua);
+            background-color: var(--color-Menu);}
+    .pack-menu button {
+        border: none;
+        border-radius: 3px;
+        font-weight: 600;
+        color: var(--color-VerdeAgua);
+        background-color: var(--color-Menu);}
+        .pack-menu button:hover {
+            transition: 0.5s;
+            color: var(--color-Amarelo);}
+.link-login {
+    display: inherit;
+    margin-left: 65rem;
+    margin-top: -2.5rem;
+    margin-right: 4rem;}
+
+
+/* Conteudo */
+.packege-tab {
+    width: 1200px;
+    height: 450px;
+    margin: 105px auto;
+    border-radius: 1rem;
+    padding: 1rem;
+    color: var(--color-Branco);
+    background-color: var(--color-MenuI);}
+.packege-tab h1 {
+    width: 250px;
+    font-size: 25pt;
+    padding: .3rem;
+    margin-left: 2.2rem;
+    margin-bottom: 2rem;
+    border-bottom: .1rem solid var(--color-Branco);}
+
+.pack-tab {
+    width: 1100px;
+    margin: 0px auto;}
+    .pack-tab table {
+        color: var(--color-Branco);}
+
+.icons-acao {
+    display: flex;
+    padding-inline: 1rem;}
+.btn-edit a{
+    color: var(--color-Branco);}    
+    .btn-del a{
+        color: var(--color-Branco);}  
+        .btn-edit span:hover {
+            transition: .5s;
+            color: var(--color-AzulClaro);}
+        .btn-del span:hover {
+            color: var(--color-Vermelho);}
+
+
+
+
+
+
+
