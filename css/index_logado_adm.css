@@ -1,0 +1,181 @@
+/* Configuração Geral */
+* { 
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;}
+/* Tabela de Cores */
+:root{ 
+    --color-Branco: #ffffff;
+    --color-Amarelo: #ffda82e6;
+    --color-AzulClaro: #00ddff;
+    --color-Vermelho: #f15454;
+    --color-AzulEscuro: #052b348f;
+    --color-VerdeAgua: #06b88e; /* OK */
+    --color-Verde: #54d65e;
+    --color-Transparente: #00000000; 
+
+    --color-Titulo: #e1fdfff0;
+    --color-Menu: #122024;
+    --color-MenuI: #35535b;
+    --color-Fundo: #59e2cb8d;
+    --color-MenuII: #293f4553;
+    --color-Transparencia: #61818943;
+    --color-TransparenciaModal: #1725289d;
+    --color-Sombra: #010c04;
+    --color-SombraMenu: #368a76;
+    --color-TextoMenu: #8cb9f083;
+    --color-CaixaEscala: #14384873;}
+
+
+/* Body */
+.wallpaper { 
+    background-color: var(--color-Fundo);}
+    .wallpaper::-webkit-scrollbar {
+        display: none;}
+
+/* ------Barra Superior - Menu-------- */
+.hdr {
+    top: 0px;
+    width: 100%;
+    z-index: 9;
+    height: 4rem;
+    position: fixed;
+    background-color: var(--color-Menu);}
+
+.logo img {
+    margin-left: 1rem;
+    margin-top:  .1rem;}
+
+.packge-menu {
+    position: relative;
+    float: right;
+    margin-top: -3.6rem;}
+
+.pack-menu p {
+    display: inline-block;
+    padding-inline: 1rem;}
+    .pack-menu a {
+        border: none;
+        color: var(--color-MenuI);
+        text-decoration: none;
+        letter-spacing: 2px;
+        background-color: var(--color-Menu);}
+        .pack-menu a:hover {
+            color: var(--color-VerdeAgua);
+            background-color: var(--color-Menu);}
+    .pack-menu button {
+        border: none;
+        border-radius: 3px;
+        font-weight: 600;
+        color: var(--color-VerdeAgua);
+        background-color: var(--color-Menu);}
+        .pack-menu button:hover {
+            transition: 0.5s;
+            color: var(--color-Vermelho);}
+.link-login {
+    display: inherit;
+    margin-left: 65rem;
+    margin-top: -2.5rem;
+    margin-right: 4rem;}
+
+
+/*--------- Tabela ---------*/
+.packege-tab {
+    width: 1200px;
+    height: 450px;
+    margin: 105px auto;
+    border-radius: 1rem;
+    padding: 1rem;
+    color: var(--color-Branco);
+    background-color: #35535b;}
+.packege-tab h1 {
+    width: 320px;
+    font-size: 25pt;
+    padding: .3rem;
+    margin-left: 2.2rem;
+    margin-bottom: 2rem;
+    border-bottom: .1rem solid var(--color-Branco);}
+.pack-tab {
+    width: 1100px;
+    margin: 0px auto;}
+    .pack-tab table {
+        color: var(--color-Branco);}
+    
+
+
+/*------------ Icones Pesquisa - Editar - Excluir ------------*/
+
+.btn-search {
+    width: 180px;
+    height: 32px;
+    padding: 1px;
+    float: right;
+    border: none;
+    font-size: 12pt;
+    padding-top: .5rem;
+    padding-left: .5rem;
+    display: flex;
+    color: var(--color-Branco);
+    margin: -70px 40px 0px 0px;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-Transparente);}
+    .btn-search a {
+        display: inline-flex;
+        text-decoration: none;
+        color: var(--color-Branco);}
+        .btn-search a:hover {
+        color: var(--color-Menu);}
+    .btn-search span {
+        margin-top: -.2rem;
+        margin-left: .3rem;}
+        .btn-search span:hover {
+            color: var(--color-Menu);}
+    .btn-search:hover {
+        border: none;
+        transition: .5s;
+        border-radius: .2rem;
+        color: var(--color-Menu);
+        background-color: var(--color-Amarelo);
+        box-shadow: 0px 0px 10px 3px var(--color-Amarelo);}
+    
+.icons-acao {
+    display: flex;
+    padding-inline: 1rem;}
+.btn-edit a{
+    color: var(--color-Branco);}    
+    .btn-del a{
+        color: var(--color-Branco);}  
+        .btn-edit span:hover {
+            transition: .5s;
+            color: var(--color-AzulClaro);}
+        .btn-del span:hover {
+            color: var(--color-Vermelho);}
+
+
+
+
+/*------ Inputs Legenda ------*/
+.container-check {
+    font-size: 10pt;
+    font-weight: 500;
+    display: inline-flex;
+    padding: 1rem;
+    margin-top: -3rem;
+    margin-bottom: -2rem;}
+    .pack-check {
+        padding: 1rem;}
+    .pack-check input {
+        width: 16px;}
+
+.container-inputs {
+    font-weight: 500;
+    font-size: 10pt;
+    display: inline-flex;}
+    .pack-inputs label {
+        margin-left: 1rem;
+        margin-bottom: -3rem;}
+    .pack-inputs input{
+        width: 80px;
+        margin-left: 1rem;}
+        
