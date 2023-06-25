@@ -82,9 +82,8 @@
 .container-table {
     width: 1250px;
     padding: 1.5rem;
-    margin-top: 2rem;
-    margin-left: 1rem;
-    position: fixed;
+    margin: 30px auto;
+    position: static;
     opacity: 5;
     border-radius: 1rem;
     color: var(--color-Branco);
