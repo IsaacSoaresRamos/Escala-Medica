@@ -109,6 +109,7 @@
     position: relative;
     max-width: 100%;
     margin-top: 10rem;
+    padding-top: -2rem;
     background-color: var(--color-MenuII);}
 .container h2 {
     text-align: center;
