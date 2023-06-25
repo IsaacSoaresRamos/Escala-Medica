@@ -83,7 +83,7 @@ $sql = "SELECT t.id_tabela, t.sd, t.sv, t.lc, t.lp, t.lm, t.sha, t.fe, t.f, t.hd
           <?php if (!empty($tabelas)) { ?>
             <!-- Aqui que será montada a tabela com a relação de Escala!! -->
             <div class="container">
-                <table class="table table-hover"><!--Tabela-->
+                <table class="table table-hover" style="margin-top: -1rem;"><!--Tabela-->
                   <thead>
                     <tr>
                       <th scope="col">#</th>
