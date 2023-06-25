@@ -49,77 +49,107 @@ session_start();//Inicia a seção
                 <h1>Cadastrar Dados</h1>
                 <section class="container-form">
                     <form action="processa_tabela.php" method="post">
-                        <div class="containI">
-                            <div class="lineI">
-                                <label for="id_serv" style="margin-left: 3.5rem;">ID Servidor</label><br>
-                                <input type="text" name="id_serv" id="id_serv" class="">
+                        <section>
+                            <div class="lineI"><!--1º linha-->
+                                <div class="btn-serv"> 
+                                    <label for ="id_serv" style="margin-left: 4rem;">ID Servidor</label><br>
+                                    <input type="text" name="id_serv" id ="id_serv">
+                                </div>
+                                <div class="btn-esp"> 
+                                    <label for="id_esp" style="margin-left: 2.5rem;">ID Especialidade</label><br>
+                                    <input type="text" name="id_esp" id="id_esp">
+                                </div>
                             </div>
-                            <div class="lineII">
-                            <label for="id_esp" style="margin-left: 2.5rem;">ID Especialidade</label><br>
-                            <input type="text" name="id_esp" id="id_esp" class="">
+
+                            <div class="lineII"> <!--2º linha-->
+                                <div class="btn-sd">
+                                    <label for="sd">SD - Servico Diurno</label>
+                                    <select class="form-select" name="sd" id="sd">
+                                        <option selected>Selecione o Valor </option>
+                                        <option value="true">Sim</option>
+                                        <option value="false">Não</option>
+                                    </select>
+                                </div>
+                                <div class="btn-sv">
+                                    <label for="sv">SV - Servico Vespertino</label>
+                                    <select class="form-select" name="sv" id="sv">
+                                        <option selected>Selecione o Valor </option>
+                                        <option value="true">Sim</option>
+                                        <option value="false">Não</option>
+                                    </select>
+                                </div>
+                                <div class="btn-lc">
+                                    <label for="lc">LC - Licenca ou Atestado Medico</label>
+                                    <select class="form-select" name="lc" id="lc">
+                                        <option selected>Selecione o Valor </option>
+                                        <option value="true">Sim</option>
+                                        <option value="false">Não</option>
+                                    </select>
+                                </div>
+                            <div>
+
+                            <div class="lineIII"> <!--3º linha-->
+                                <div class="btn-lp">
+                                    <label for="lp">LP - Licenca Premio</label>
+                                    <select class="form-select" name="lp" id="lp">
+                                        <option selected>Selecione o Valor </option>
+                                        <option value="true">Sim</option>
+                                        <option value="false">Não</option>
+                                    </select>
+                                </div>
+                                <div class="btn-lm">
+                                    <label for="lm">LM - Licenca Maternidade</label>
+                                    <select class="form-select" name="lm" id="lm">
+                                        <option selected>Selecione o Valor </option>
+                                        <option value="true">Sim</option>
+                                        <option value="false">Não</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <label for="sd">SD - Servico Diurno</label>
-                        <select class="form-select" name="sd" id="sd">
-                            <option selected>Selecione o Valor </option>
-                            <option value="true">Sim</option>
-                            <option value="false">Não</option>
-                        </select>
-                        <br>
-                        <label for="sv">SV - Servico Vespertino</label>
-                        <select class="form-select" name="sv" id="sv">
-                            <option selected>Selecione o Valor </option>
-                            <option value="true">Sim</option>
-                            <option value="false">Não</option>
-                        </select>
-                        <br>
-                        <label for="lc">LC - Licenca ou Atestado Medico</label>
-                        <select class="form-select" name="lc" id="lc">
-                            <option selected>Selecione o Valor </option>
-                            <option value="true">Sim</option>
-                            <option value="false">Não</option>
-                        </select>
-                        <br>
-                        <label for="lp">LP - Licenca Premio</label>
-                        <select class="form-select" name="lp" id="lp">
-                            <option selected>Selecione o Valor </option>
-                            <option value="true">Sim</option>
-                            <option value="false">Não</option>
-                        </select>
-                        <br>
-                        <label for="lm">LM - Licenca Maternidade</label>
-                        <select class="form-select" name="lm" id="lm">
-                            <option selected>Selecione o Valor </option>
-                            <option value="true">Sim</option>
-                            <option value="false">Não</option>
-                        </select>
-                        <br>
-                        <label for="sha">SHA - Saldo de Horas Anteriores</label>
-                        <input type="text" name="sha" id="sha" class="">
-                        <br>
-                        <label for="fe">FE - Ferias</label>
-                        <input type="text" name="fe" id="fe" class="">
-                        <br>
-                        <label for="f">F - Folga</label>
-                        <input type="text" name="f" id="f" class="">
-                        <br>
-                        <label for="shm">SHM - Saldo de Horas no Mes</label>
-                        <input type="text" name="shm" id="shm" class="">
-                        <br>
-                        <label for="hd">/ - 8 Horas Diarias</label>
-                        <input type="text" name="hd" id="hd" class="">
-                        <br>
-                        <label for="cht">CHT - Carga Horaria Trabalhada</label>
-                        <input type="text" name="cht" id="cht" class="">
-                        <br>
-                        <label for="sht">SHT - Saldo de Horas Total</label>
-                        <input type="text" name="sht" id="sht" class="">
-                        <br>
-                        <label for="chm">CHM - Carga Horaria do Mes</label>
-                        <input type="text" name="chm" id="chm" class="">
-                        <br>
-                        <button type="submit" name="enviarTabela" value="CAD" class="">Cadastrar</button>
-                        <a href="tabela_adm.php" class="">Cancelar</a>
+
+                            <hr/><!--Divisoria-->
+
+                            <div class="lineIV">
+                                <div class="btn-hd">
+                                    <label for="hd">/ - 8 Horas <br>Diarias</label>
+                                    <input type="text" name="hd" id="hd" class="">
+                                </div>
+                                <div class="btn-fe">
+                                    <label for="fe">FE - Ferias</label>
+                                    <input type="text" name="fe" id="fe" class="">
+                                </div>
+                                <div class="btn-f">
+                                    <label for="f">F - Folga</label>
+                                    <input type="text" name="f" id="f" class="">
+                                </div>
+                                <div class="btn-shm">
+                                    <label for="shm">SHM - Saldo de Horas <br>no Mes</label>
+                                    <input type="text" name="shm" id="shm" class="">
+                                </div>
+                            </div>
+                            <div class="lineV">
+                                <div class="btn-sha">
+                                    <label for="sha">SHA - Saldo de Horas <br>Anteriores</label>
+                                    <input type="text" name="sha" id="sha" class="">
+                                </div>
+                                <div class="btn-cht">
+                                    <label for="cht">CHT - Carga Horaria <br>Trabalhada</label>
+                                    <input type="text" name="cht" id="cht" class="">
+                                </div>
+                                <div class="btn-sht">
+                                    <label for="sht">SHT - Saldo de <br>Horas Total</label>
+                                    <input type="text" name="sht" id="sht" class="">
+                                </div>
+                                <div class="btn-chm">
+                                    <label for="chm">CHM - Carga Horaria<br> do Mes</label>
+                                    <input type="text" name="chm" id="chm" class="">
+                                </div>
+                            </div>           
+
+                            <div class="btn-cad-can"> <!-- Botão Cadastrar/Cancelar --> 
+                                <button type="submit" name="enviarTabela" value="CAD" class="cad">Cadastrar</button>
+                                <button class="can-btn"><a href="tabela_adm.php" class="can_link">Cancelar</a></button>
+                            </div>
                     </section>
                 </form>
             </div>
