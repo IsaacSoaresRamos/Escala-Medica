@@ -74,115 +74,115 @@ $sql = "SELECT t.id_tabela, t.sd, t.sv, t.lc, t.lp, t.lm, t.sha, t.fe, t.f, t.hd
             </div>
         </nav>
       </header>
-    <main>
-      <div class="titulo-table">
-        <h1>Escala</h1>
-      </div>
-    <div class="container-table">
-                      
-      <?php if (!empty($tabelas)) { ?>
-        <!-- Aqui que será montada a tabela com a relação de Escala!! -->
-        <div class="container">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Nome Servidor</th>
-                  <th scope="col">Especialidade</th>
-                  <th scope="col">SD</th>
-                  <th scope="col">SV</th>
-                  <th scope="col">LC</th>
-                  <th scope="col">LP</th>
-                  <th scope="col">LM</th>
-                  <th scope="col">SHA</th>
-                  <th scope="col">FE</th>
-                  <th scope="col">F</th>
-                  <th scope="col">SHM</th>
-                  <th scope="col">/</th>
-                  <th scope="col">CHT</th>
-                  <th scope="col">SHT</th>
-                  <th scope="col">CHM</th>
-                  <th scope="col"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <?php foreach ($tabelas as $t) { ?>
-                  <tr>
-                    <th scope="row"><?php echo $t['id_tabela']; ?></th>
-                    <td><?php echo $t['nome']; ?></td>
-                    <td><?php echo $t['esp']; ?></td>
-                    <td>
-                      <?php
-                        if ($t['sd'] == 'true') {
-                          echo "Sim";
-                        } else {
-                          echo "Não";
-                        }
-                      ?>
-                    </td>
-                    <td>
-                      <?php
-                        if ($t['sv'] == 'true') {
-                          echo "Sim";
-                        } else {
-                          echo "Não";
-                        }
-                      ?>
-                    </td>
-                    <td>
-                      <?php
-                        if ($t['lc'] == 'true') {
-                          echo "Sim";
-                        } else {
-                          echo "Não";
-                        }
-                      ?>
-                    </td>
-                    <td>
-                      <?php
-                        if ($t['lp'] == 'true') {
-                          echo "Sim";
-                        } else {
-                          echo "Não";
-                        }
-                      ?>
-                    </td>
-                    <td>
-                      <?php
-                        if ($t['lm'] == 'true') {
-                          echo "Sim";
-                        } else {
-                          echo "Não";
-                        }
-                      ?>
-                    </td>
-                    <td><?php echo $t['sha']; ?></td>
-                    <td><?php echo $t['fe']; ?></td>
-                    <td><?php echo $t['f']; ?></td>
-                    <td><?php echo $t['shm']; ?></td>
-                    <td><?php echo $t['hd']; ?></td>
-                    <td><?php echo $t['cht']; ?></td>
-                    <td><?php echo $t['sht']; ?></td>
-                    <td><?php echo $t['chm']; ?></td>
-                    <td>
-                      <div class="icons-acao">
-                        <div class="btn-edit">
-                            <a href="alt_tabela.php?id_tabela=<?php echo $t['id_tabela']; ?>"><span class="material-symbols-outlined icon-edit">edit</span></a>
-                        </div>
-                        <div class="btn-del">
-                            <a href="del_tabela.php?id_tabela=<?php echo $t['id_tabela']; ?>"><span class="material-symbols-outlined icon-del">delete</span></a>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                <?php } ?>
-              </tbody>
-            </table>
-          </div>
-        <?php } ?>
+      <main>
+        <div class="titulo-table">
+          <h1>Escala</h1>
         </div>
-      </div>
-    </main>
+      <div class="container-table">
+                        
+        <?php if (!empty($tabelas)) { ?>
+          <!-- Aqui que será montada a tabela com a relação de Escala!! -->
+          <div class="container">
+              <table class="table table-striped"><!--Tabela-->
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome Servidor</th>
+                    <th scope="col">Especialidade</th>
+                    <th scope="col">SD</th>
+                    <th scope="col">SV</th>
+                    <th scope="col">LC</th>
+                    <th scope="col">LP</th>
+                    <th scope="col">LM</th>
+                    <th scope="col">SHA</th>
+                    <th scope="col">FE</th>
+                    <th scope="col">F</th>
+                    <th scope="col">SHM</th>
+                    <th scope="col">/</th>
+                    <th scope="col">CHT</th>
+                    <th scope="col">SHT</th>
+                    <th scope="col">CHM</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php foreach ($tabelas as $t) { ?>
+                    <tr>
+                      <th scope="row"><?php echo $t['id_tabela']; ?></th>
+                      <td><?php echo $t['nome']; ?></td>
+                      <td><?php echo $t['esp']; ?></td>
+                      <td>
+                        <?php
+                          if ($t['sd'] == 'true') {
+                            echo "Sim";
+                          } else {
+                            echo "Não";
+                          }
+                        ?>
+                      </td>
+                      <td>
+                        <?php
+                          if ($t['sv'] == 'true') {
+                            echo "Sim";
+                          } else {
+                            echo "Não";
+                          }
+                        ?>
+                      </td>
+                      <td>
+                        <?php
+                          if ($t['lc'] == 'true') {
+                            echo "Sim";
+                          } else {
+                            echo "Não";
+                          }
+                        ?>
+                      </td>
+                      <td>
+                        <?php
+                          if ($t['lp'] == 'true') {
+                            echo "Sim";
+                          } else {
+                            echo "Não";
+                          }
+                        ?>
+                      </td>
+                      <td>
+                        <?php
+                          if ($t['lm'] == 'true') {
+                            echo "Sim";
+                          } else {
+                            echo "Não";
+                          }
+                        ?>
+                      </td>
+                      <td><?php echo $t['sha']; ?></td>
+                      <td><?php echo $t['fe']; ?></td>
+                      <td><?php echo $t['f']; ?></td>
+                      <td><?php echo $t['shm']; ?></td>
+                      <td><?php echo $t['hd']; ?></td>
+                      <td><?php echo $t['cht']; ?></td>
+                      <td><?php echo $t['sht']; ?></td>
+                      <td><?php echo $t['chm']; ?></td>
+                      <td>
+                        <div class="icons-acao">
+                          <div class="btn-edit">
+                              <a href="alt_tabela.php?id_tabela=<?php echo $t['id_tabela']; ?>"><span class="material-symbols-outlined icon-edit">edit</span></a>
+                          </div>
+                          <div class="btn-del">
+                              <a href="del_tabela.php?id_tabela=<?php echo $t['id_tabela']; ?>"><span class="material-symbols-outlined icon-del">delete</span></a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  <?php } ?>
+                </tbody>
+              </table>
+            </div>
+          <?php } ?>
+          </div>
+        </div>
+      </main>
     <footer><!-- Legenda -->
                <section> 
                     <div class="container">
