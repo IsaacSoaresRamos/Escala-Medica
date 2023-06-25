@@ -72,9 +72,8 @@
 
 /* Conteudo */
 .packege-tab {
-    width: 1200px;
-    height: 450px;
-    margin: 105px auto;
+    width: 800px;
+    margin: 140px auto;
     border-radius: 1rem;
     padding: 1rem;
     color: var(--color-Branco);
@@ -88,14 +87,17 @@
     border-bottom: .1rem solid var(--color-Branco);}
 
 .pack-tab {
-    width: 1100px;
+    width: 700px;
     margin: 0px auto;}
     .pack-tab table {
         color: var(--color-Branco);}
-
 .icons-acao {
     display: flex;
+    margin-right: rem;
+    justify-content: flex-end;
     padding-inline: 1rem;}
+.btn-edit {
+    margin-right: 2rem;}
 .btn-edit a{
     color: var(--color-Branco);}    
     .btn-del a{

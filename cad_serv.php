@@ -23,7 +23,7 @@ session_start();//Inicia a seção
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- CSS -->
-        <link rel="stylesheet" href="css/cad_esp.css">
+        <link rel="stylesheet" href="css/cad_serv.css">
 </head>
     <body class="wallpaper"> 
     <header class="hdr"> <!--Cabeçalho-->
@@ -52,34 +52,34 @@ session_start();//Inicia a seção
                     <form action="Processa_user.php" method="post">
 
                         <div class="pack-formI"> <!-- 1º Linha -->
-                            <div class="packege-inputs">
+                            <div class="pack-input-name">
                                 <label for="nome" style="margin-left: 2.4rem;">Nome Completo</label>
                                 <input type="text" name="nome" id="nome">
                             </div>
-                            <div class="packege-inputs" style="margin-left: 2rem;">
+                            <div class="pack-input-cpf" style="margin-left: 2rem;">
                                 <label for="cpf" style="margin-left: 5rem;">CPF</label>
                                 <input type="text" name="cpf" id="cpf">
                             </div>
-                            <div class="packege-inputs" style="margin-left: 2rem;">
+                            <div class="pack-input-matric" style="margin-left: 2rem;">
                                 <label for="matricula" style="margin-left: 4rem;">Matricula</label>
                                 <input type="text" name="matricula" id="matricula" class="">
                             </div>
                         </div>
 
                         <div class="pack-formII"> <!-- 2º Linha -->
-                            <div class="packege-input-email">
+                            <div class="pack-input-email">
                                 <label for="email" style="margin-left: 7.4rem;">E-mail</label>
                                 <input type="email" name="email" id="email" style="margin-left: 3rem;">
                             </div>
-                            <div class="packege-select">
+                            <div class="pack-select">
                                 <label for="adm" style="margin-left: 3.4rem;">Adiministrador</label>
                                 <select class="form-select" name="adm" id="adm">
-                                    <option selected>Selecione o Valor </option>
+                                    <option selected>Selecione o Valor</option>
                                     <option value="SIM">Sim</option>
                                     <option value="NAO">Não</option>
                                 </select>
                             </div>
-                            <div class="packege-input-password" >
+                            <div class="pack-input-password" >
                                 <label for="senha" style="margin-left: 4.5rem;">Senha</label>
                                 <input type="password" name="senha" id="senha" class="">
                             </div>

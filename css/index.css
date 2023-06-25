@@ -68,17 +68,14 @@
 /* Conteudo */
 .titulo {
     font-size: 30pt;
-    margin-top: 8rem;
-    margin-bottom: -3rem;
-    margin-left: 31rem;
-    padding: 1rem;
+    text-align: center;
+    padding-top: 7.4rem;
     color: var(--color-Branco); 
     text-shadow: var(--color-AzulEscuro) 0.1em 0.1em 0.2em}
 .packege {
     float: right;
-    height: 290px;
-    padding: 24px;
-    margin-bottom: 2rem;
+    padding: 2rem;
+    margin-bottom: 9.1rem;
     background-color: var(--color-Transparente);}
     .packege a {
         text-decoration: none;}
@@ -86,22 +83,23 @@
     font-size: 12pt;
     text-align: center;
     margin-left: .5rem;}
+    .packege-inputs input {
+        z-index: 1;
+        height: 45px;
+        transition: 0.5s;
+        margin-left: -.2rem;
+        border: .1rem solid var(--color-Menu);
+        background-color: var(--color-FundoBotao);}
+        .packege-inputs input:hover {
+            transition: 0.5s;
+            letter-spacing: .2rem;
+            background-color: var(--color-Branco);}
     .input-group span {
         font-size: 15pt;
         border: .1rem solid var(--color-Menu);
         color: var(--color-Branco);
         background-color: var(--color-Menu);
         z-index: 999;}
-    .input-group input {
-        z-index: 1;
-        height: 45px;
-        margin-left: -.2rem;
-        border: .1rem solid var(--color-Menu);
-        background-color: var(--color-Transparente);}
-        .input-group input:hover {
-            transition: 0.5s;
-            letter-spacing: .2rem;
-            background-color: var(--color-FundoBotao);}
         .input-group input::placeholder {
             color: var(--color-Branco);
             font-size: 10pt;}
@@ -118,19 +116,3 @@
                 letter-spacing: .2rem;
                 box-shadow: 0 0 1em var(--color-MenuI);
                 background-color: var(--color-FundoBotao);}
-
-.recuperar {
-    margin: -50px auto 67px 560px;}
-    .recuperar a {
-        color: var(--color-MenuI); }
-    .recuperar label {
-        color: var(--color-MenuI);}
-    .recuperar button {
-        border: none;
-        margin-left: 40px;
-        color: var(--color-AzulMedio);
-        background-color: var(--color-Transparente);}
-        .recuperar button:hover {
-            cursor: pointer;
-            transition: 0.8s;
-            color: var(--color-SombraMenu);}

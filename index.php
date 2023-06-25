@@ -10,7 +10,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- CSS -->
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
     <body class="wallpaper">
         <?php if (!empty($_GET['msgErro'])) { 
@@ -48,13 +48,13 @@
                             <!-- Matricúla / Senha | classe interna-->
                             <div class="packege-inputs">             
                                         <div class="input-group mb-3">
-                                                <span for="matricula" class="input-group-text material-symbols-outlined">person</span>
-                                                <input type="matricula" class="form-control" name="matricula" placeholder="Matricúla">
+                                            <span for="matricula" class="input-group-text material-symbols-outlined">person</span>
+                                            <input type="matricula" class="form-control" name="matricula" placeholder="Matricúla">
                                         </div>
 
                                         <div class="input-group mb-3 ">
-                                                <span for="senha" class="input-group-text material-symbols-outlined">lock</span>
-                                                <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha">
+                                            <span for="senha" class="input-group-text material-symbols-outlined">lock</span>
+                                            <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha">
                                         </div>
                                     </div> <!-- Fim Matricúla / Senha -->
                                     

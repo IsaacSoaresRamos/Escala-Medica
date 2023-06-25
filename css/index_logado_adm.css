@@ -27,12 +27,12 @@
     --color-TextoMenu: #8cb9f083;
     --color-CaixaEscala: #14384873;}
 
-
 /* Body */
 .wallpaper { 
     background-color: var(--color-Fundo);}
     .wallpaper::-webkit-scrollbar {
         display: none;}
+
 
 /* ------Barra Superior - Menu-------- */
 .hdr {
@@ -42,16 +42,13 @@
     height: 4rem;
     position: fixed;
     background-color: var(--color-Menu);}
-
 .logo img {
     margin-left: 1rem;
     margin-top:  .1rem;}
-
 .packge-menu {
     position: relative;
     float: right;
     margin-top: -3.6rem;}
-
 .pack-menu p {
     display: inline-block;
     padding-inline: 1rem;}
@@ -88,7 +85,7 @@
     border-radius: 1rem;
     padding: 1rem;
     color: var(--color-Branco);
-    background-color: #35535b;}
+    background-color:var(--color-MenuI);}
 .packege-tab h1 {
     width: 320px;
     font-size: 25pt;
@@ -103,9 +100,7 @@
         color: var(--color-Branco);}
     
 
-
 /*------------ Icones Pesquisa - Editar - Excluir ------------*/
-
 .btn-search {
     width: 180px;
     height: 32px;
@@ -151,8 +146,6 @@
             color: var(--color-AzulClaro);}
         .btn-del span:hover {
             color: var(--color-Vermelho);}
-
-
 
 
 /*------ Inputs Legenda ------*/

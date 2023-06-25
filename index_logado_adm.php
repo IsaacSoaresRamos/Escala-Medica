@@ -79,15 +79,7 @@ $sql = "SELECT * FROM serv_log ORDER BY id_serv ASC";
     <main>
     <div class="packege-tab">
       <h1>Gerenciar Servidor</h1>
-                    
-      <!-- Botão para abrir Modal de Pesquisa -->
-      <button class="material-symbols-outlined btn-search">
-        <a href="#">
-          <p>Pesquisar Servidor</p>
-          <span class="material-symbols-outlined icon-search">search</span>
-        </a>
-      </button>
-                  
+         
       <?php if (!empty($servidores)) { ?>
         <!-- Aqui que será montada a tabela com a relação de servidores!! -->
         

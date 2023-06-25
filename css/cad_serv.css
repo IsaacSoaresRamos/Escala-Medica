@@ -71,88 +71,73 @@
 
 /* Conteudo */
 .containe h1 {
-    margin-top: 8rem;
+    margin-top: 7rem;
     margin-bottom: -5rem;
     letter-spacing: .2rem;
     text-align: center;
     color: var(--color-MenuI); 
     text-shadow: var(--color-AzulEscuro) 0.1em 0.1em 0.2em;}
+
 .container-form {
-    width: 800px;
+    width: 700px;
     height: 300px;
     margin: 110px auto 0px auto;
     padding: .5rem;
     display: flex;
     border-radius: 1rem;
     background-color: var(--color-Caixa);}
-.container-form label {
-    color: var(--color-Branco);}
 .pack-formI{
-    width: 650px;
-    margin: 1rem;
-    padding: .5rem;
-    margin-left: 4rem;
+    width: 600px;
+    margin-top: 25px;
+    margin-left: 3rem;
     display:inline-flex;
-    justify-content: center;}
-.pack-formII {
-    width: 650px;
-    margin: 1rem;
-    margin-left: 3.6rem;
-    padding-inline: 2rem;
-    display:inline-flex;
-    justify-content: center;}
-
-.packege-input-email {
-    margin-left: -3rem;}
-    .packege-input-email input {
+    justify-content: center;
+    color: var(--color-Branco);}
+.pack-input-name, .pack-input-cpf {
+    margin-left: 1rem;}
+.pack-input-matric {
+    margin-right: 1rem;}
+    .pack-input-name input, .pack-input-cpf input, .pack-input-matric input {
         border: none;
-        margin-left: -.5rem;
-        border-radius: 0px;
+        width: 200px;
         text-align: center;
-        border-bottom: .1rem solid var(--color-Branco);
         color: var(--color-Branco);
-        background-color: var(--color-Transparente);}
-.packege-input-password {
-    margin-left: 2rem;}
-    .packege-input-password input {
-        border: none;
-        margin-left: -.5rem;
-        border-radius: 0px;
-        text-align: center;
-        border-bottom: .1rem solid var(--color-Branco);
-        color: var(--color-Branco);
-        background-color: var(--color-Transparente);}
-.packege-inputs input {
-    border: none;
-    margin-left: -.5rem;
-    border-radius: 0px;
-    text-align: center;
-    border-bottom: .1rem solid var(--color-Branco);
-    color: var(--color-Branco);
-    background-color: var(--color-Transparente);}
-    .packege-inputs input:hover {
-        color: var(--color-Branco);
-        border: none;
-        border-bottom: .1rem solid var(--color-Branco);
-        background-color: var(--color-Transparente);}
-.packege-select {
-    margin-left: 30px;
-    margin-top: -12px;}
-        .packege-select select {
-            width: 200px;
-            border: none;
-            border-radius: 0px;
-            border-bottom: .1rem solid var(--color-Branco);
-            color: var(--color-Branco);
-            background-color: var(--color-Transparente);}
-    .packege-select option {
-        text-align: center;
-        color: var(--color-Menu);
-        background-color: var(--color-Fundo);}
+        background-color: var(--color-Transparente);
+        border-bottom: .1rem solid var(--color-Branco);}
     
+
+.pack-formII {
+    width: 700px;
+    margin-top: 2rem;
+    margin-left: -.5rem;
+    display:inline-flex;
+    justify-content: center;
+    color: var(--color-Branco);}
+    .pack-input-email input, .pack-select select, .pack-input-password input {
+        border: none;
+        width: 200px;
+        height: 30px;
+        padding: 1rem;
+        border-radius: 0px;
+        text-align: center;
+        color: var(--color-Branco);
+        background-color: var(--color-Transparente);
+        border-bottom: .1rem solid var(--color-Branco);}
+    .pack-input-email {
+        margin-left: -1.5rem;}
+    .pack-select {
+        margin-left: .5rem;
+        margin-right: 2rem;}
+        .pack-select option {
+            color: var(--color-Branco);
+            background-color: var(--color-MenuI);}
+    .pack-input-password {
+        margin-right: -rem;}
+
+
 .btn-cad-can {
-    margin-left: 20rem;
-    margin-top: 3rem;
+    margin-left: 16rem;
+    margin-top: 3.5rem;
     display: flex;}
 .cad {
     width: 110px;

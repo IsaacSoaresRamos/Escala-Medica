@@ -84,7 +84,7 @@ $sql = "SELECT * FROM especialidade ORDER BY id_esp ASC";
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">Nome</th>
-                  <th scope="col">Ações</th>
+                  <th scope="col"></th>
                 </tr>
               </thead>
               <tbody>
@@ -92,7 +92,7 @@ $sql = "SELECT * FROM especialidade ORDER BY id_esp ASC";
                   <tr>
                     <th scope="row"><?php echo $s['id_esp']; ?></th>
                     <td><?php echo $s['esp']; ?></td>
-                    <td>
+                    <td><!--Ação-->
                       <div class="icons-acao">
                         <div class="btn-edit">
                           <a href="alt_esp.php?id_esp=<?php echo $s['id_esp']; ?>"><span class="material-symbols-outlined icon-edit">edit</span></a>
