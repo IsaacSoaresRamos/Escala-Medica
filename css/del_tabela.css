@@ -1,0 +1,162 @@
+/* Configuração Geral */
+* { 
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, sans-serif;}
+/* Tabela de Cores */
+:root{ 
+    --color-Amarelo: #deb147;
+    --color-AzulEscuro: #052b348f;
+    --color-Branco: #ffffff;
+    --color-Caixa: #052b34b7;
+    --color-Menu: #122024;
+    --color-Fundo: #b7fff1;
+    --color-MenuI: #35535b;
+    --color-VermelhoEscuro: #880000;
+    --color-SombraMenu: #7fcfbc;
+    --color-Transparente: #00000000; 
+    --color-VerdeAgua: #06b88e; 
+    --color-Verde: #54d65e;
+    --color-Vermelho: #f15454;}
+
+/* Body */
+.wallpaper { 
+    background-color: var(--color-Fundo);}
+    .wallpaper::-webkit-scrollbar {
+        display: none;}
+
+/* Barra Superior - Menu */
+.hdr {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 4rem;
+    background-color: var(--color-Menu);}
+
+.logo img {
+    margin-left: 1rem;
+    margin-top:  .1rem;}
+
+.packge-menu {
+    position: relative;
+    float: right;
+    margin-top: -3.6rem;}
+
+.pack-menu p {
+    display: inline-block;
+    padding-right: 1rem;}
+    .pack-menu a {
+        border: none;
+        color: var(--color-MenuI);
+        text-decoration: none;
+        letter-spacing: 2px;
+        background-color: var(--color-Menu);}
+        .pack-menu a:hover {
+            color: var(--color-VerdeAgua);
+            background-color: var(--color-Menu);}
+    .pack-menu button {
+        border: none;
+        border-radius: 3px;
+        font-weight: 600;
+        color: var(--color-VerdeAgua);
+        background-color: var(--color-Menu);}
+        .pack-menu button:hover {
+            transition: 0.5s;
+            color: var(--color-Vermelho);}
+.link-login {
+    display: inherit;
+    margin-left: 65rem;
+    margin-top: -2.5rem;
+    margin-right: 4rem;}
+
+
+/*Conteudo*/
+.containe-del h1 {
+    margin-top: 8rem;
+    margin-bottom: -5rem;
+    letter-spacing: .2rem;
+    font-weight: 600;
+    font-family: 25pt;
+    text-align: center;
+    color: var(--color-VermelhoEscuro); 
+    text-shadow: var(--color-AzulEscuro) 0em 0em 0.1em;}
+.texto-atencao h2{
+    float: right;
+    width: 250px;
+    height: 40px;
+    font-size: 14pt;
+    text-align: center;
+    margin-left: 3rem;
+    margin-top: -1rem;
+    color: var(--color-Branco);}
+.container-form-del {
+    width: 350px;
+    margin: 110px auto 0px auto;
+    margin-bottom: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    display: flex;
+    border-radius: 1rem;
+    background-color: var(--color-Caixa);}
+.lineI {    
+    margin-top: 3rem;
+    margin-left: -19rem;
+    display: inline-flex;
+    color: var(--color-Menu);}
+.btn-serv input, .btn-esp input {
+    width: 50px;
+    border: none;
+    text-align: center;
+    font-size: 14pt;
+    margin-left: 5rem;
+    color: var(--color-Menu);
+    background-color: var(--color-Transparente);
+    border-bottom: .1rem solid var(--color-Menu);}
+
+
+.btn-edit-del {
+    margin-left: -12.5rem;
+    margin-top: 3rem;
+    display: flex;}
+.del {
+    width: 110px;
+    height: 35px;
+    border: none;
+    font-size: 10pt;
+    transition: 0.5s;
+    margin-left: -3rem;
+    border-radius: 4px;
+    letter-spacing: .1rem;
+    color: var(--color-Branco);
+    border: 1.5px solid var(--color-Branco);
+    background-color: var(--color-Transparente);}
+    .del:hover {
+        font-weight: 600;
+        transition: 0.5s;
+        border-color: var(--color-SombraMenu);
+        color: var(--color-MenuI);
+        box-shadow: 0 0 1em var(--color-SombraMenu);
+        background-color: var(--color-SombraMenu);}
+
+.btn-del {
+    width: 110px;
+    height: 35px;
+    border: none;
+    font-size: 10pt;
+    transition: 0.5s;
+    margin-left: 2rem;
+    border-radius: 4px;
+    letter-spacing: .1rem;
+    color: var(--color-Branco);
+    border: 1.5px solid var(--color-Branco);
+    background-color: var(--color-Transparente);}
+    .btn-del:hover {
+        font-weight: 600;
+        transition: 0.5s;
+        border-color: var(--color-Vermelho);
+        color: var(--color-MenuI);
+        box-shadow: 0 0 1em var(--color-SombraMenu);
+        background-color: var(--color-Vermelho);}
+    .btn-del a {
+        text-decoration: none;
+        color: var(--color-Branco);}

@@ -164,17 +164,17 @@ $sql = "SELECT t.id_tabela, t.sd, t.sv, t.lc, t.lp, t.lm, t.sha, t.fe, t.f, t.hd
                         <td><?php echo $t['cht']; ?></td>
                         <td><?php echo $t['sht']; ?></td>
                         <td><?php echo $t['chm']; ?></td>
-                        <td>
+                        <td><!-- Ações -->
                           <div class="icons-acao">
                             <div class="btn-edit">
-                                <a href="alt_tabela.php?id_tabela=<?php echo $t['id_tabela']; ?>"><span class="material-symbols-outlined icon-edit">edit</span></a>
+                                <a href="alt_tabela.php?id_tabela=<?php echo $t['id_tabela']; ?>"><span class="material-symbols-outlined" style="font-size: 20pt;">edit</span></a>
                             </div>
                             <div class="btn-del">
-                                <a href="del_tabela.php?id_tabela=<?php echo $t['id_tabela']; ?>"><span class="material-symbols-outlined icon-del">delete</span></a>
+                                <a href="del_tabela.php?id_tabela=<?php echo $t['id_tabela']; ?>"><span class="material-symbols-outlined" style="font-size: 20pt;">delete</span></a>      
                             </div>
-                          </div>
-                        </td>
-                      </tr>
+                          </div> <!-- Fim icons-acao -->
+                        </td><!-- Fim Ações -->
+                      </tr> <!-- Fim Linha -->
                     <?php } ?>
                   </tbody>
                 </table>
@@ -273,6 +273,6 @@ $sql = "SELECT t.id_tabela, t.sd, t.sv, t.lc, t.lp, t.lm, t.sha, t.fe, t.f, t.hd
           <a href="#"><button><span class="material-symbols-outlined">keyboard_double_arrow_up</span></button></a>
         </div>
       </section>
-    </footer>                    
+    </footer>                 
   </body>
 </html>
