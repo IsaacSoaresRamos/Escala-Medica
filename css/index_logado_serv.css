@@ -22,7 +22,8 @@
 .wallpaper { 
     background: rgb(89,226,204);
     background: linear-gradient(0deg, rgba(89,226,204,1) 7%, rgba(59,166,163,1) 60%, rgba(26,108,97,1) 99%);}
-
+    .wallpaper::-webkit-scrollbar {
+        display: none;}
 /* Barra Superior - Menu */
 .hdr {
     position: fixed;

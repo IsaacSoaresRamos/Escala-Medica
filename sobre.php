@@ -23,9 +23,9 @@
                <nav class="menu"> <!--Menu-->
                    <div class="packge-menu">
                        <section class="pack-menu">
-                           <a href="index.php"><p type="button">Login</p></a>
+                           <a href="Logout.php"><p type="button">Login</p></a>
                            <a href="sobre.php"><p type="button" >Sobre</p></a>
-                           <a href="index.php" class="link-login"><button type="login">Voltar</button></a>
+                           <a href="index_logado_adm.php" class="link-login"><button type="login">Voltar</button></a>
                        </section>
                    </div>
                </nav>
