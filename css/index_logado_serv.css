@@ -1,0 +1,83 @@
+/* Configuração Geral */
+* { 
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, sans-serif;}
+/* Tabela de Cores */
+:root{ 
+    --color-AzulEscuro: #052b348f;
+    --color-Branco: #ffffff;
+    --color-Menu: #122024;
+    --color-MenuI: #35535b;
+    --color-VerdeAgua: #06b88e;
+    --color-Verde: #54d65e;}
+
+/* Body */
+.wallpaper { 
+    background: rgb(89,226,204);
+    background: linear-gradient(0deg, rgba(89,226,204,1) 7%, rgba(59,166,163,1) 60%, rgba(26,108,97,1) 99%);}
+
+/* Barra Superior - Menu */
+.hdr {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 4rem;
+    background-color: var(--color-Menu);}
+.logo img {
+    margin-left: 1rem;
+    margin-top:  .1rem;}
+.packge-menu {
+    position: relative;
+    float: right;
+    margin-top: -3.6rem;}
+.pack-menu p {
+    display: inline-block;
+    padding-right: 1.5rem;}
+    .pack-menu a {
+        border: none;
+        color: var(--color-MenuI);
+        text-decoration: none;
+        letter-spacing: 2px;
+        background-color: var(--color-Menu);}
+        .pack-menu a:hover {
+            color: var(--color-VerdeAgua);
+            background-color: var(--color-Menu);}
+    .pack-menu button {
+        border: none;
+        border-radius: 3px;
+        font-weight: 600;
+        color: var(--color-VerdeAgua);
+        background-color: var(--color-Menu);}
+        .pack-menu button:hover {
+            transition: 0.5s;
+            color: var(--color-Verde);}
+.link-login {
+    display: inherit;
+    margin-left: 65rem;
+    margin-top: -2.5rem;
+    margin-right: 4rem;}
+
+.pack-titulo {
+    width: 500px;
+    margin: 140px auto;
+    margin-bottom: 300px;
+    background-color: burlywood;}
+.pack-titulo h1 {
+    margin-top: 7rem;
+    text-align: center;
+    font-size: 20pt;
+    color: var(--color-Menuranco);
+    font-family: 'Philosopher', sans-serif;}
+.pack-titulo h2 {
+    width: 380px;
+    font-size: 20pt;
+    margin: 0px auto;
+    margin-top: 1rem;
+    text-align: center;
+    background-color: #54d65e;
+    border-bottom: .1rem solid var(--color-MenuI);}
+
+
+
+

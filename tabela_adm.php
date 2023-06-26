@@ -46,7 +46,7 @@ $sql = "SELECT t.id_tabela, t.sd, t.sv, t.lc, t.lp, t.lm, t.sha, t.fe, t.f, t.hd
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- CSS -->
-        <link rel="stylesheet" href="css/tabela_adm.css">
+        <link rel="stylesheet" href="css/tabela.css">
 </head>
   <body class="wallpaper"> 
     <?php if (!empty($_GET['msgErro'])) 
@@ -183,19 +183,18 @@ $sql = "SELECT t.id_tabela, t.sd, t.sv, t.lc, t.lp, t.lm, t.sha, t.fe, t.f, t.hd
         </div>
       </main>
     <footer><!-- Legenda -->
-               <section> 
-                    <div class="container">
-                         <h2 id="id_ancora">Legenda</h2>
-                         <div class="container-tableI"> <!-- Tabela lado Esquerdo -->
-                              <table class="table text-center">
-                                   <thead><!--Titulo-->
-                                        <tr>
-                                             <th scope="col">Sigla</th>
-                                             <th scope="col">Descrição</th>
-                                        </tr>
-                                   </thead>
-
-                                   <tbody class="pack-tab-body"><!--Corpo-->
+      <section> 
+        <div class="container">
+          <h2 id="id_ancora">Legenda</h2>
+            <div class="container-tableI"> <!-- Tabela lado Esquerdo -->
+              <table class="table text-center">
+                <thead><!--Titulo-->
+                  <tr>
+                    <th scope="col">Sigla</th>
+                    <th scope="col">Descrição</th>
+                  </tr>
+                </thead>
+                <tbody class="pack-tab-body"><!--Corpo-->
                                         <tr>
                                              <th scope="row">SD</th>
                                              <td>Serviço Diurno</td>
@@ -225,11 +224,10 @@ $sql = "SELECT t.id_tabela, t.sd, t.sv, t.lc, t.lp, t.lm, t.sha, t.fe, t.f, t.hd
                                              <th scope="row">SHA</th>
                                              <td>Saldo de Horas Anteriores</td>
                                         </tr>
-                                   </tbody>
-                              </table>
-                         </div>
-
-                         <div class="container-tableII"> <!-- Tabela lado Direito -->
+                </tbody>
+              </table>
+            </div>
+            <div class="container-tableII"> <!-- Tabela lado Direito -->
                               <table class="table text-center">
                                    <thead><!--Titulo-->
                                         <tr>
@@ -270,12 +268,11 @@ $sql = "SELECT t.id_tabela, t.sd, t.sv, t.lc, t.lp, t.lm, t.sha, t.fe, t.f, t.hd
                                         </tr>
                                    </tbody>
                               </table>
-                         </div>
-
-                         <!-- Botão para voltar ao Topo-->
-                         <a href="#"><button><span class="material-symbols-outlined">keyboard_double_arrow_up</span></button></a>
-                    </div>
-               </section>
-          </footer>                    
+            </div>
+          <!-- Botão para voltar ao Topo-->
+          <a href="#"><button><span class="material-symbols-outlined">keyboard_double_arrow_up</span></button></a>
+        </div>
+      </section>
+    </footer>                    
   </body>
 </html>
