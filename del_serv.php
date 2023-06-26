@@ -46,49 +46,92 @@ else {
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-br" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Pagina de delte servidor</title>
-  </head>
-  <body>
-    <h1>Apagar Servidor</h1>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excluir Especialidade</title>
+    <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- CSS -->
+        <link rel="stylesheet" href="css/alt_serv.css">
+</head>
+  <body class="wallpaper"> 
+    <header class="hdr"> <!--Cabeçalho-->
+        <figure class="logo">
+            <img src="img/logo.png">
+        </figure>
+               
+        <nav class="menu"> <!--Menu-->
+            <div class="packge-menu">
+                <section class="pack-menu">
+                    <a href="tabela_adm.php"><p type="button" >Escala</p></a>
+                    <a href="index_logado_adm.php"><p type="button">Gerenciamento</p></a>
+                    <a href="sobre.php"><p type="button" >Sobre</p></a>
+                    <a href="Logout.php" class="link-login"><button type="login">Sair</button></a>
+                </section>
+            </div>
+        </nav>
+    </header>
+    <div class="containe">
+      <header class="titulo">
+        <h1>Excluir Servidor</h1>
+      </header>
+      <section>
+        <div class="container-form">
+          <form action="processa_serv.php" method="post">
 
-    <form action="processa_serv.php" method="post">
+            <div class="pack-formI"> <!-- 1º Linha -->
+              <div class="pack-input-idserv">
+                <label for="id_serv"></label><br>
+                <input type="hidden" name="id_serv" id="id_anuncio" value="<?php echo $result['id_serv']; ?>" readonly>
+              </div>
+              <div class="pack-input-name">
+                <label for="nome">Nome</label><br>
+                <input type="text" style="width: 200px;" name="nome" id="nome" value="<?php echo $result['nome']; ?>" >
+              </div>
 
-        <label for="id_serv">ID</label>
-        <input type="text" class="" name="id_serv" id="id_anuncio" value="<?php echo $result['id_serv']; ?>" readonly>
-        
-        <br><br>
+              <div class="pack-input-cpf">
+                <label for="cpf">CPF</label><br>
+                <input type="text" style="width: 150px;" name="cpf" id="cpf" value="<?php echo $result['cpf']; ?>" >
+              </div>
 
-        <label for="nome">Nome</label>
-        <input type="text" class="" name="nome" id="nome" value="<?php echo $result['nome']; ?>" readonly>
+              <div class="pack-input-matric">
+                <label for="cpf">Matricula</label><br>
+                <input type="text" class="" name="matricula" id="matricula" value="<?php echo $result['matricula']; ?>" readonly>
+              </div>
+            </div>
 
-        <br><br>
+            <div class="pack-formII"> <!-- 2º Linha -->
+              <div class="pack-input-email">
+                <label for="email">Email</label><br>
+                <input type="text" name="email" id="email" value="<?php echo $result['email']; ?>" >
+              </div>
+                
+              <div class="pack-select col-4">
+                  <label for="adm">Adiministrador</label><br>
+                  <select class="form-select"  name="adm" id="adm">
+                    <option>Selecione o valor</option>
+                    <option value="SIM" <?php echo $result['adm'] == "SIM" ? "selected" : "" ?>>Sim</option>
+                    <option value="NAO" <?php echo $result['adm'] == "NAO" ? "selected" : "" ?>>Não</option>
+                  </select>
+              </div>
 
-        <label for="cpf">CPF</label>
-        <input type="text" class="" name="cpf" id="cpf" value="<?php echo $result['cpf']; ?>" readonly>
+              <div class="pack-input-password">
+                <label for="senha">Senha</label><br>
+                <input type="password" name="senha" id="senha" value="<?php echo $result['senha']; ?>" >
+              </div>
+            </div>
 
-        <br><br>
-
-        <label for="cpf">Matricula</label>
-        <input type="text" class="" name="matricula" id="matricula" value="<?php echo $result['matricula']; ?>" readonly>
-
-        <br><br>
-
-        <label for="email">Email</label>
-        <input type="text" class="" name="email" id="email" value="<?php echo $result['email']; ?>" readonly>
-
-        <br><br>
-
-        <label for="senha">Senha</label>
-        <input type="password" class="" name="senha" id="senha" value="<?php echo $result['senha']; ?>" readonly>
-
-        <br><br>
-
-        <button type="submit" name="enviarDados" class="" value="DEL">Apagar</button>
-        <a href="index_logado_adm.php" class="">Cancelar</a>
-
-    </form>
+            <div class="btn-cad-can"> <!-- Botão Cadastrar/Cancelar --> 
+              <button type="submit" name="enviarDados" class="cad" value="DEL">Apagar</button> 
+              <button class="can-btn"><a href="index_logado_adm.php" class="can_link">Cancelar</a></button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
   </body>
 </html>

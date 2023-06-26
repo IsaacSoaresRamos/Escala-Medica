@@ -78,7 +78,7 @@ else {
     </header>
 
     <main>
-      <div class="containe">
+      <div class="containe-alt">
         <header class="titulo">
           <h1>Editar Servidor</h1>
         </header>

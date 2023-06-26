@@ -69,6 +69,13 @@
     margin-right: 4rem;}
 
 /* Conteudo */
+.containe-alt h1 {
+    margin-top: 7rem;
+    margin-bottom: -5rem;
+    letter-spacing: .2rem;
+    text-align: center;
+    color: var(--color-MenuI); 
+    text-shadow: var(--color-AzulEscuro) 0.1em 0.1em 0.2em;}
 .titulo h1 {
     margin-top: 7rem;
     margin-bottom: -5rem;

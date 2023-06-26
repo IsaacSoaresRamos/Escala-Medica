@@ -28,22 +28,23 @@ session_start();//Inicia a seção
         <link rel="stylesheet" href="css/cad_esp.css">
 </head>
   <body class="wallpaper"> 
-    <header class="hdr"> <!--Cabeçalho-->
-        <figure class="logo">
-            <img src="img/logo.png">
-        </figure>
-               
-        <nav class="menu"> <!--Menu-->
-            <div class="packge-menu">
-                <section class="pack-menu">
-                    <a href="tabela_adm.php"><p type="button" >Escala</p></a>
-                    <a href="index_logado_adm.php"><p type="button">Gerenciamento</p></a>
-                    <a href="sobre.php"><p type="button" >Sobre</p></a>
-                    <a href="Logout.php" class="link-login"><button type="login">Sair</button></a>
-                </section>
-            </div>
-        </nav>
-    </header>
+    <manin>
+      <header class="hdr"> <!--Cabeçalho-->
+          <figure class="logo">
+              <img src="img/logo.png">
+          </figure>
+                
+          <nav class="menu"> <!--Menu-->
+              <div class="packge-menu">
+                  <section class="pack-menu">
+                      <a href="tabela_adm.php"><p type="button" >Escala</p></a>
+                      <a href="index_logado_adm.php"><p type="button">Gerenciamento</p></a>
+                      <a href="sobre.php"><p type="button" >Sobre</p></a>
+                      <a href="Logout.php" class="link-login"><button type="login">Sair</button></a>
+                  </section>
+              </div>
+          </nav>
+      </header>
       <div class="containe">
         <h1>Cadastrar Especialidade</h1>
         <section>
@@ -60,5 +61,6 @@ session_start();//Inicia a seção
             </form>
           </div>
         </section>  
+      </manin>
     </body>
 </html>
