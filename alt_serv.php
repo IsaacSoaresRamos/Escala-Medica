@@ -49,58 +49,93 @@ else {
 
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Pagina de alterar servidor</title>
-  </head>
-  <body>
-    <h1>Alterar Servidor</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Servidor</title>
+    <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- CSS -->
+        <link rel="stylesheet" href="css/alt_serv.css">
+</head>
+    <body class="wallpaper"> 
+    <header class="hdr"> <!--Cabeçalho-->
+        <figure class="logo">
+            <img src="img/logo.png">
+        </figure>
+        <nav class="menu"> <!--Menu-->
+            <div class="packge-menu">
+                <section class="pack-menu">
+                    <a href="tabela_adm.php"><p type="button" >Escala</p></a>
+                    <a href="index_logado_adm.php"><p type="button">Gerenciamento</p></a>
+                    <a href="sobre.php"><p type="button" >Sobre</p></a>
+                    <a href="Logout.php" class="link-login"><button type="login">Sair</button></a>
+                </section>
+            </div>
+        </nav>
+    </header>
 
-    <form action="processa_serv.php" method="post">
+    <main>
+      <div class="containe">
+        <header class="titulo">
+          <h1>Editar Servidor</h1>
+        </header>
+        <section>
+          <div class="container-form">
+            <!-- Formulario -->
+            <form action="processa_serv.php" method="post">
+              <div class="pack-formI"> <!-- 1º Linha -->
 
-        <label for="id_serv"></label>
-        <input type="hidden" class="" name="id_serv" id="id_anuncio" value="<?php echo $result['id_serv']; ?>" readonly>
-        
+                <div class="pack-input-idserv">
+                  <label for="id_serv"></label><br>
+                  <input type="hidden" name="id_serv" id="id_anuncio" value="<?php echo $result['id_serv']; ?>" readonly>
+                </div>
+                <div class="pack-input-name">
+                  <label for="nome">Nome</label><br>
+                  <input type="text" style="width: 200px;" name="nome" id="nome" value="<?php echo $result['nome']; ?>" >
+                </div>
 
-        <label for="nome">Nome</label>
-        <input type="text" class="" name="nome" id="nome" value="<?php echo $result['nome']; ?>" >
+                <div class="pack-input-cpf">
+                  <label for="cpf">CPF</label><br>
+                  <input type="text" style="width: 150px;" name="cpf" id="cpf" value="<?php echo $result['cpf']; ?>" >
+                </div>
 
-        <br><br>
+                <div class="pack-input-matric">
+                  <label for="cpf">Matricula</label><br>
+                  <input type="text" class="" name="matricula" id="matricula" value="<?php echo $result['matricula']; ?>" readonly>
+                </div>
+              </div>
+              <div class="pack-formII"> <!-- 2º Linha -->
 
-        <label for="cpf">CPF</label>
-        <input type="text" class="" name="cpf" id="cpf" value="<?php echo $result['cpf']; ?>" >
-
-        <br><br>
-
-        <label for="cpf">Matricula</label>
-        <input type="text" class="" name="matricula" id="matricula" value="<?php echo $result['matricula']; ?>" readonly>
-
-        <br><br>
-
-        <label for="email">Email</label>
-        <input type="text" class="" name="email" id="email" value="<?php echo $result['email']; ?>" >
-
-        <br><br>
-
-        <div class="col-4">
-          <label for="adm">Adiministrador</label>
-          <select class="form-select" name="adm" id="adm">
-            <option>Selecione o valor</option>
-            <option value="SIM" <?php echo $result['adm'] == "SIM" ? "selected" : "" ?>>Sim</option>
-            <option value="NAO" <?php echo $result['adm'] == "NAO" ? "selected" : "" ?>>Não</option>
-          </select>
-        </div>
-
-        <br><br>
-
-        <label for="senha">Senha</label>
-        <input type="password" class="" name="senha" id="senha" value="<?php echo $result['senha']; ?>" >
-
-        <br><br>
-
-        <button type="submit" name="enviarDados" class="" value="ALT">Alterar</button>
-        <a href="index_logado_adm.php" class="">Cancelar</a>
-
-    </form>
+                <div class="pack-input-email">
+                  <label for="email">Email</label><br>
+                  <input type="text" name="email" id="email" value="<?php echo $result['email']; ?>" >
+                </div>
+                  
+                <div class="pack-select col-4">
+                    <label for="adm">Adiministrador</label><br>
+                    <select class="form-select"  name="adm" id="adm">
+                      <option>Selecione o valor</option>
+                      <option value="SIM" <?php echo $result['adm'] == "SIM" ? "selected" : "" ?>>Sim</option>
+                      <option value="NAO" <?php echo $result['adm'] == "NAO" ? "selected" : "" ?>>Não</option>
+                    </select>
+                </div>
+                
+                <div class="pack-input-password">
+                  <label for="senha">Senha</label><br>
+                  <input type="password" name="senha" id="senha" value="<?php echo $result['senha']; ?>" >
+                </div>
+              </div>
+              <div class="btn-cad-can"> <!-- Botão Cadastrar/Cancelar --> 
+                  <button type="submit" name="enviarDados" class="cad" value="ALT">Salvar</button>  
+                  <button class="can-btn"><a href="index_logado_adm.php" class="can_link">Cancelar</a></button>
+              </div>
+            </form>
+          </div><!-- Fim container-form -->
+        </section>
+      </div>
+    </main>
   </body>
 </html>

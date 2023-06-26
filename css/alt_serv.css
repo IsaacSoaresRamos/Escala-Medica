@@ -68,16 +68,14 @@
     margin-top: -2.5rem;
     margin-right: 4rem;}
 
-
 /* Conteudo */
-.containe h1 {
+.titulo h1 {
     margin-top: 7rem;
     margin-bottom: -5rem;
     letter-spacing: .2rem;
     text-align: center;
     color: var(--color-MenuI); 
     text-shadow: var(--color-AzulEscuro) 0.1em 0.1em 0.2em;}
-
 .container-form {
     width: 700px;
     height: 300px;
@@ -89,60 +87,78 @@
 .pack-formI{
     width: 600px;
     margin-top: 25px;
-    margin-left: 3rem;
-    display:inline-flex;
+    margin-left: 8rem;
+    display:flex;
     justify-content: center;
     color: var(--color-Branco);}
-.pack-input-name, .pack-input-cpf {
-    margin-left: 1rem;}
-.pack-input-matric {
-    margin-right: 1rem;}
-    .pack-input-name input, .pack-input-cpf input, .pack-input-matric input {
-        border: none;
-        width: 200px;
-        text-align: center;
-        color: var(--color-Branco);
-        background-color: var(--color-Transparente);
-        border-bottom: .1rem solid var(--color-Branco);}
-    
+.pack-input-idserv{
+    border: none;
+    width: 30px;
+    text-align: center;
+    margin-left: -13rem;
+    color: var(--color-Branco); }
+.pack-input-name, .pack-input-cpf, .pack-input-matric, .pack-input-email, .pack-select, .pack-input-password {
+    text-align: center;}
+.pack-input-name input,.pack-input-cpf input, .pack-input-matric input  {
+    border: none;
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+    text-align: center;
+    color: var(--color-Branco);
+    background-color: var(--color-Transparente);
+    border-bottom: .1rem solid var(--color-Branco);}
 
 .pack-formII {
-    width: 700px;
-    margin-top: 2rem;
-    margin-left: -.5rem;
-    display:inline-flex;
-    justify-content: center;
-    color: var(--color-Branco);}
-    .pack-input-email input, .pack-input-password input {
+    display:flex;
+    margin-top: 30px;
+    margin-left: -11rem;
+    text-align: center;
+    justify-content: center;}
+.pack-input-email {
+    margin-left: 3rem;}
+        .pack-input-email label {
+    color:  var(--color-Branco);
+    margin-left: 2.2rem;}
+    .pack-input-email input {
+        width: 150px;
         border: none;
-        width: 200px;
-        height: 30px;
-        padding: 1rem;
-        border-radius: 0px;
+        margin-left: 2.5rem;
         text-align: center;
+        border-radius: 0px;
         color: var(--color-Branco);
         background-color: var(--color-Transparente);
         border-bottom: .1rem solid var(--color-Branco);}
-    .pack-input-email {
-        margin-left: -1.5rem;}
-    .pack-select {
-        margin-left: .5rem;
-        margin-right: 2rem;}
-        .pack-select select {
-            border: none;
-            width: 200px;
-            height: 30px;
-            padding: 1rem;
-            border-radius: 0px;
-            text-align: center;
-            color: var(--color-Menu);
-            background-color: var(--color-Caixa);
-            border-bottom: .1rem solid var(--color-Branco);}
+.pack-select {
+    margin-right: 3rem;
+    color: var(--color-Branco);}
+    .pack-select select{
+        width: 100px;
+        border: none;
+        margin-left: 6.2rem;
+        margin-top: -.7rem;
+        text-align: center;
+        border-radius: 0px;
+        color: var(--color-Branco);
+        background-color: var(--color-Transparente);
+        border-bottom: .1rem solid var(--color-Branco);} 
         .pack-select option {
-            color: var(--color-Branco);
-            background-color: var(--color-Caixa);}
-    .pack-input-password {
-        margin-right: -rem;}
+            background-color: #35535b;}
+
+
+.pack-input-password {
+    margin-left:  -3rem;}
+    .pack-input-password label {
+        color: var(--color-Branco);
+        margin-left: 2.5rem;}
+    .pack-input-password input{
+        width: 150px;   
+        border: none;
+        margin-right: -3rem;
+        text-align: center;
+        border-radius: 0px;
+        color: var(--color-Branco);
+        background-color: var(--color-Transparente);
+        border-bottom: .1rem solid var(--color-Branco);}
 
 
 .btn-cad-can {

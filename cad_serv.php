@@ -74,9 +74,9 @@ session_start();//Inicia a seção
                             <div class="pack-select">
                                 <label for="adm" style="margin-left: 3.4rem;">Adiministrador</label>
                                 <select class="form-select" name="adm" id="adm">
-                                    <option selected>Selecione o Valor</option>
+                                    <option>Selecione o valor</option>
                                     <option value="SIM">Sim</option>
-                                    <option value="NAO">Não</option>
+                                    <option value="NAO" >Não</option>
                                 </select>
                             </div>
                             <div class="pack-input-password" >
