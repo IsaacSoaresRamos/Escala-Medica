@@ -135,12 +135,12 @@
             padding: 1rem;
             border-radius: 0px;
             text-align: center;
-            color: var(--color-Menu);
-            background-color: var(--color-Caixa);
+            color: var(--color-Branco);
+            background-color: var(--color-Transparente);
             border-bottom: .1rem solid var(--color-Branco);}
         .pack-select option {
-            color: var(--color-Branco);
-            background-color: var(--color-Caixa);}
+            color: var(--color-Menu);
+            background-color: var(--color-Fundo);}
     .pack-input-password {
         margin-right: -rem;}
 
