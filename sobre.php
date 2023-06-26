@@ -32,7 +32,7 @@
            </header>
 
           <main class="packege"> <!--Conteudo-->
-               <h1 class="titulo">Projeto - Escala para UBS</h1>
+               <h1 class="titulo">Projeto - Escala Médica</h1>
                <div class="pack-texto">
                     <p class="texto">Sistema desenvolvido pelos alunos do 5º periodo da faculdade Senac, <br>no ano de 2023, do curso de Análise e Desenvolvido de Sistemas - ADS. <br>Este projeto é destinado a matéria de Laboratorio de Inovação V, ministrada pelo professor Edilberto.</p>
                

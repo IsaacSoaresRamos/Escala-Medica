@@ -3,12 +3,12 @@ require_once 'Conexao.php';
 
 session_start();//Inicia a seção
 
-//if (empty($_SESSION)) {
+if (empty($_SESSION)) {
   // Significa que as variáveis de SESSAO não foram definidas.
   // Não poderia acessar aqui.
-  //header("Location: index.php?msgErro=Você precisa se autenticar no sistema.");
-  //die();
-//}
+  header("Location: index.php?msgErro=Você precisa se autenticar no sistema.");
+  die();
+}
 
 $sql = "SELECT t.id_tabela, t.sd, t.sv, t.lc, t.lp, t.lm, t.sha, t.fe, t.f, t.hd, t.shm, t.cht, t.sht, t.chm, t.id_serv, t.id_esp, serv.nome, esp.esp
         FROM tabela t

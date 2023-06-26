@@ -3,13 +3,12 @@ require_once 'Conexao.php'; //Puxa a conexão do banco
 
 session_start();//Inicia a seção
 
-//if (empty($_SESSION)) {
-  // Significa que as variáveis de SESSAO não foram definidas.
-  // Não poderia acessar aqui.
- // header("Location: index.php?msgErro=Você precisa se autenticar no sistema.");
-  //die();
-//}
-
+if (empty($_SESSION)) {
+    // Significa que as variáveis de SESSAO não foram definidas.
+    // Não poderia acessar aqui.
+    header("Location: index.php?msgErro=Você precisa se autenticar no sistema.");
+    die();
+}
 ?>
 
 <!DOCTYPE html>
