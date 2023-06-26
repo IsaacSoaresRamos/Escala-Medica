@@ -109,7 +109,7 @@ session_start();//Inicia a seção
 
                             <hr/><!--Divisoria-->
 
-                            <div class="lineIV">
+                            <div class="lineIV"> <!--4º linha-->
                                 <div class="btn-hd">
                                     <label for="hd">/ - 8 Horas <br>Diarias</label>
                                     <input type="text" name="hd" id="hd" class="">
@@ -127,7 +127,8 @@ session_start();//Inicia a seção
                                     <input type="text" name="shm" id="shm" class="">
                                 </div>
                             </div>
-                            <div class="lineV">
+                            
+                            <div class="lineV"> <!--5º linha-->
                                 <div class="btn-sha">
                                     <label for="sha">SHA - Saldo de Horas <br>Anteriores</label>
                                     <input type="text" name="sha" id="sha" class="">

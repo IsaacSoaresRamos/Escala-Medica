@@ -56,12 +56,12 @@ else {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Especialidade</title>
+    <title>Editar Tabela</title>
     <!-- Bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- CSS -->
-        <link rel="stylesheet" href="css/cad_tabela.css">
+        <link rel="stylesheet" href="css/alt_tabela.css">
 </head>
   <body class="wallpaper"> 
     <header class="hdr"> <!--Cabeçalho-->
@@ -85,13 +85,16 @@ else {
       <div class="containe">
         <h1>Editar Escala</h1>
           <section class="container-form">
+
             <form action="processa_tabela.php" method="post">
+
               <section>
+                
                 <div class="lineI"><!--1º linha-->
                   <div>
                     <label for="id_tabela"></label>
                     <input type="hidden" class="" name="id_tabela" id="id_tabela" value="<?php echo $result['id_tabela']; ?>" readonly>
-                  <div>
+                  </div>
                   <div class="btn-serv"> 
                     <label for ="id_serv" style="margin-left: 4rem;">ID Servidor</label><br>
                     <input type="text" name="id_serv" id="id_serv" value="<?php echo $result['id_serv']; ?>" readonly>
@@ -102,96 +105,96 @@ else {
                   </div>
                 </div>
 
-
-                <div class="col-4">
-                  <label for="sd">SD - Servico Diurno</label>
-                  <select class="form-select" name="sd" id="sd">
-                    <option>Selecione o valor</option>
-                    <option value="true" <?php echo $result['sd'] == true ? "selected" : "" ?>>Sim</option>
-                    <option value="false" <?php echo $result['sd'] == false ? "selected" : "" ?>>Não</option>
-                  </select>
+                <div class="lineII"> <!--2º linha-->
+                  <div class="btn-sd">
+                      <label for="sd">SD - Servico Diurno</label>
+                      <select class="form-select" name="sd" id="sd">
+                        <option>Selecione o valor</option>
+                        <option value="true" <?php echo $result['sd'] == true ? "selected" : "" ?>>Sim</option>
+                        <option value="false" <?php echo $result['sd'] == false ? "selected" : "" ?>>Não</option>
+                      </select>
+                  </div>
+                  <div class="btn-sv">
+                      <label for="sv">SV - Servico Vespertino</label>
+                      <select class="form-select" name="sv" id="sv">
+                          <option selected>Selecione o Valor </option>
+                          <option value="true">Sim</option>
+                          <option value="false">Não</option>
+                      </select>
+                  </div>
+                  <div class="btn-lc">
+                    <label for="lc">LC - Licenca ou Atestado Medico</label>
+                      <select class="form-select" name="lc" id="lc">
+                        <option>Selecione o valor</option>
+                        <option value="true" <?php echo $result['lc'] == true ? "selected" : "" ?>>Sim</option>
+                        <option value="false" <?php echo $result['lc'] == false ? "selected" : "" ?>>Não</option>
+                      </select>
+                  </div>
                 </div>
 
-                <div class="col-4">
-                  <label for="sv">SV - Servico Vespertino</label>
-                  <select class="form-select" name="sv" id="sv">
-                    <option>Selecione o valor</option>
-                    <option value="true" <?php echo $result['sv'] == true ? "selected" : "" ?>>Sim</option>
-                    <option value="false" <?php echo $result['sv'] == false ? "selected" : "" ?>>Não</option>
-                  </select>
+                <div class="lineIII"> <!--3º linha-->
+                  <div class="btn-lp">
+                                  <label for="lp">LP - Licenca Premio</label>
+                                  <select class="form-select" name="lp" id="lp">
+                                    <option>Selecione o valor</option>
+                                    <option value="true" <?php echo $result['lp'] == true ? "selected" : "" ?>>Sim</option>
+                                    <option value="false" <?php echo $result['lp'] == false ? "selected" : "" ?>>Não</option>
+                                  </select>
+                  </div>
+                  <div class="btn-lm">
+                    <label for="lm">LM - Licenca Maternidade</label>
+                    <select class="form-select" name="lm" id="lm">
+                      <option>Selecione o valor</option>
+                      <option value="true" <?php echo $result['lm'] == true ? "selected" : "" ?>>Sim</option>
+                      <option value="false" <?php echo $result['lm'] == false ? "selected" : "" ?>>Não</option>
+                    </select>
+                  </div>
                 </div>
 
-                <div class="col-4">
-                  <label for="lc">LC - Licenca ou Atestado Medico</label>
-                  <select class="form-select" name="lc" id="lc">
-                    <option>Selecione o valor</option>
-                    <option value="true" <?php echo $result['lc'] == true ? "selected" : "" ?>>Sim</option>
-                    <option value="false" <?php echo $result['lc'] == false ? "selected" : "" ?>>Não</option>
-                  </select>
-                </div>
+                <hr/><!--Divisoria-->
 
-                <div class="col-4">
-                  <label for="lp">LP - Licenca Premio</label>
-                  <select class="form-select" name="lp" id="lp">
-                    <option>Selecione o valor</option>
-                    <option value="true" <?php echo $result['lp'] == true ? "selected" : "" ?>>Sim</option>
-                    <option value="false" <?php echo $result['lp'] == false ? "selected" : "" ?>>Não</option>
-                  </select>
-                </div>
-
-                <div class="col-4">
-                  <label for="lm">LM - Licenca Maternidade</label>
-                  <select class="form-select" name="lm" id="lm">
-                    <option>Selecione o valor</option>
-                    <option value="true" <?php echo $result['lm'] == true ? "selected" : "" ?>>Sim</option>
-                    <option value="false" <?php echo $result['lm'] == false ? "selected" : "" ?>>Não</option>
-                  </select>
-                </div>
-
-                <div class="col-4">
-                  <label for="sha">SHA - Saldo de Horas Anteriores</label>
-                  <input type="text" name="sha" id="sha" class="" value="<?php echo $result['sha']; ?>">
-                </div>
-
-                <div class="col-4">
-                  <label for="fe">FE - Ferias</label>
-                  <input type="text" name="fe" id="fe" class="" value="<?php echo $result['fe']; ?>">
-                </div>
-
-                <div class="col-4">
-                  <label for="f">F - Folga</label>
-                  <input type="text" name="f" id="f" class="" value="<?php echo $result['f']; ?>">
-                </div>
-
-                <div class="col-4">
-                  <label for="shm">SHM - Saldo de Horas no Mes</label>
+                <div class="lineIV"> <!--4º linha-->
+                  <div class="btn-hd">
+                    <label for="hd">/ - 8 Horas Diarias</label>
+                    <input type="text" name="hd" id="hd" class="" value="<?php echo $result['hd']; ?>">
+                  </div>
+                  <div class="btn-fe">
+                    <label for="fe">FE - Ferias</label>
+                    <input type="text" name="fe" id="fe" class="" value="<?php echo $result['fe']; ?>">
+                  </div>
+                  <div class="btn-f">
+                    <label for="f">F - Folga</label>
+                    <input type="text" name="f" id="f" class="" value="<?php echo $result['f']; ?>">
+                  </div>
+                  <div class="btn-shm">
+                  <label for="shm">SHM - Saldo de Horas<br> no Mês</label>
                   <input type="text" name="shm" id="shm" class="" value="<?php echo $result['shm']; ?>">
+                  </div>                                
                 </div>
 
-                <div class="col-4">
-                  <label for="hd">/ - 8 Horas Diarias</label>
-                  <input type="text" name="hd" id="hd" class="" value="<?php echo $result['hd']; ?>">
-                </div>
-
-                <div class="col-4">
-                  <label for="cht">CHT - Carga Horaria Trabalhada</label>
-                  <input type="text" name="cht" id="cht" class="" value="<?php echo $result['cht']; ?>">
-                </div>
-
-                <div class="col-4">
-                  <label for="sht">SHT - Saldo de Horas Total</label>
-                  <input type="text" name="sht" id="sht" class="" value="<?php echo $result['sht']; ?>">
-                </div>
-
-                <div class="col-4">
-                  <label for="chm">CHM - Carga Horaria do Mes</label>
+                <div class="lineV"> <!--5º linha-->
+                  <div class="btn-sha">
+                  <label for="sha">SHA - Saldo de Horas<br>Anteriores</label>
+                  <input type="text" name="sha" id="sha" class="" value="<?php echo $result['sha']; ?>">
+                  </div>
+                  <div class="btn-cht">
+                    <label for="cht">CHT - Carga Horaria Trabalhada</label>
+                    <input type="text" name="cht" id="cht" class="" value="<?php echo $result['cht']; ?>">
+                  </div>
+                  <div class="btn-sht">
+                    <label for="sht">SHT - Saldo de Horas Total</label>
+                    <input type="text" name="sht" id="sht" class="" value="<?php echo $result['sht']; ?>">
+                  </div>
+                  <div class="btn-chm">
+                  <label for="chm">CHM - Carga Horaria<br> do Mês</label>
                   <input type="text" name="chm" id="chm" class="" value="<?php echo $result['chm']; ?>">
+                  </div>
+                </div> 
+
+                <div class="btn-cad-can"> <!-- Botão Cadastrar/Cancelar --> 
+                  <button type="submit" name="enviarTabela" class="cad" value="ALT">Alterar</button>
+                  <button class="can-btn"><a href="tabela_adm.php" class="can_link">Cancelar</a></button>
                 </div>
-
-                <br />
-
-                <button type="submit" name="enviarTabela" class="btn btn-primary" value="ALT">Alterar</button>
-                <a href="tabela.php" class="btn btn-danger">Cancelar</a>
               </section>
             </form> <!-- Fim Formúlario -->
           </section>

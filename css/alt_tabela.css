@@ -69,6 +69,7 @@
     margin-right: 4rem;}
 
 /* Conteudo */
+
 .containe h1 {
     margin-top: 8rem;
     margin-bottom: -5rem;
@@ -88,38 +89,53 @@
 .container-form hr{
     width: 700px;
     margin-top: 3rem;
-    margin-left: -660px;
+    margin-left: 3rem;
     border: .1rem solid var(--color-Fundo);}
+.container-form input, .container-form select {
+    text-align: center;
+    color: var(--color-Branco);}
 
-
-.lineI, .lineIII{    
-    display: inline-flex;
+.lineI{    
+    display: flex;
     margin-left: 9rem;
     color: var(--color-Branco);}
-    .btn-serv {
-    margin-right: 5rem;}
-        .btn-serv input {
-            border: none;
-            background-color: var(--color-Transparente);
-            border-bottom: .1rem solid var(--color-Branco);}
-    .btn-esp {
-        margin-left: 1rem;
-        margin-right: -1rem;}
-        .btn-esp input {
-            border: none;
-            background-color: var(--color-Transparente);
-            border-bottom: .1rem solid var(--color-Branco);}
-
 .lineII {
     display: inline-flex;
     margin-left: 12rem;
     color: var(--color-Branco);}
 .lineIII {
     width: 360px;
+    display: flex;
+    margin-left: 13rem;
+    margin-top: 2rem;
+    color: var(--color-Branco);}
+.lineIV {
+    width: 700px;
+    display: flex;
+    margin-top: 2rem;
+    margin-left: 3rem;
+    padding-left: 4rem;
+    color: var(--color-Branco);}
+.lineV{
+    width: 700px;
     display: inline-flex;
-    margin-left: -500px;
-    margin-top: 7.5rem;}
+    margin-top: 2rem;
+    margin-left: 4.3rem;
+    color: var(--color-Branco);}
 
+.btn-serv {
+    margin-right: 5rem;}
+    .btn-serv input {
+            border: none;
+            background-color: var(--color-Transparente);
+            border-bottom: .1rem solid var(--color-Branco);}
+.btn-esp {
+        margin-left: 1rem;
+        margin-right: -1rem;}
+    .btn-esp input {
+            border: none;
+            background-color: var(--color-Transparente);
+            border-bottom: .1rem solid var(--color-Branco);}
 .btn-sd {
     margin-top: 2.5rem;
     margin-left: -7rem;}
@@ -146,37 +162,24 @@
     .btn-lm label{
     width: 175px;
     text-align: center;}
-    .btn-sd select, .btn-sv select, .btn-lc select, .btn-lp select, .btn-lm select {
+.btn-sd select, .btn-sv select, .btn-lc select, .btn-lp select, .btn-lm select {
         width: 175px;
         border: none;
         border-radius: 0%;
         color: var(--color-Branco);
         background-color: var(--color-Transparente);
         border-bottom: .1rem solid var(--color-Branco);}
-    .btn-sd option, .btn-sv option, .btn-lc option, .btn-lp option, .btn-lm option{
+.btn-sd option, .btn-sv option, .btn-lc option, .btn-lp option, .btn-lm option{
         color: var(--color-Branco);
         background-color: var(--color-MenuI);}
 
-
-.lineIV {
-    width: 700px;
-    display: inline-flex;
-    margin-top: 1rem;
-    margin-left: -40.5rem;
-    padding-left: 4rem;}
-    .lineIV label, .lineV label {
+.lineIV label, .lineV label {
         text-align: center;}
-    .lineIV input, .lineV input {
+.lineIV input, .lineV input {
         width: 100px;
         border: none;
         background-color: var(--color-Transparente);
         border-bottom: .1rem solid var(--color-Branco);}
-
-.lineV {
-    width: 700px;
-    display: inline-flex;
-    margin-top: 1.5rem;
-    margin-left: -40rem;}
 
 .btn-sha {
     margin-left: -1rem;}
@@ -199,9 +202,10 @@
         margin-left: 1.9rem;}
 
 .btn-hd { 
-    margin-left: .5rem;}    
+    margin-top: 1.4rem;
+    margin-left: .7rem;}    
     .btn-hd label {
-    margin-left: .9rem;}
+    margin-left: -1rem;}
 .btn-cht input {
     margin-left: 1.5rem;}
 .btn-sht input {
@@ -210,9 +214,16 @@
     margin-left: 1.7rem;}
 
 
+
+
+
+
+
+
+
 .btn-cad-can {
-    margin-left: -24rem;
-    margin-top: 3rem;
+    margin-left: 20rem;
+    margin-top: 4rem;
     display: flex;}
 .cad {
     width: 110px;
@@ -255,3 +266,6 @@
     .can-btn a {
         text-decoration: none;
         color: var(--color-Branco);}
+
+
+
