@@ -84,13 +84,18 @@
     display: flex;
     border-radius: 1rem;
     background-color: var(--color-Caixa);}
+.btn-idesp {
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: -10rem;}
 .btn-esp{
     text-align: center;
-    margin-top: 2rem;
-    margin-left: 4rem;}
-    .btn-esp label{
+    margin-top: -3.6rem;
+    margin-left: 10rem;}
+     
+    .btn-esp label, .btn-idesp label{
         color: var(--color-Branco);}
-    .btn-esp input{
+    .btn-esp input, .btn-idesp input{
         border: none;
         margin-top: .5rem;
         border-radius: 0px;

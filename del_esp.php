@@ -59,6 +59,7 @@ else {
         <link rel="stylesheet" href="css/del_esp.css">
 </head>
   <body class="wallpaper"> 
+    <main>
     <header class="hdr"> <!--Cabeçalho-->
         <figure class="logo">
             <img src="img/logo.png">
@@ -75,23 +76,28 @@ else {
             </div>
         </nav>
     </header>
+
+    <div class="containe">
     <h1>Apagar Especialidade</h1>
-
-    <form action="processa_esp.php" method="post">
-
-        <label for="id_esp">ID</label>
-        <input type="text" class="" name="id_esp" id="id_anuncio" value="<?php echo $result['id_esp']; ?>" readonly>
-        
-        <br><br>
-
-        <label for="esp">Especialidade</label>
-        <input type="text" class="" name="esp" id="esp" value="<?php echo $result['esp']; ?>" readonly>
-
-        <br><br>
-
-        <button type="submit" name="enviarDados" class="" value="DEL">Apagar</button>
-        <a href="list_esp.php" class="">Cancelar</a>
-
-    </form>
+    <section>
+      <div class="container-form">
+        <form action="processa_esp.php" method="post">
+          <div class="btn-idesp">
+            <label for="id_esp">ID</label><br>
+            <input type="text" style="width: 100px;" name="id_esp" id="id_anuncio" value="<?php echo $result['id_esp']; ?>" readonly>
+          </div>
+          <div class="btn-esp">
+            <label for="nome">Especialidade</label><br/>
+            <input type="text" style="width: 170px;" name="esp" id="esp" value="<?php echo $result['esp']; ?>" readonly>
+          </div>
+          <div class="btn-cad-can"> <!-- Botão Cadastrar/Cancelar --> 
+            <button type="submit" name="enviarDados" class="cad" value="DEL">Apagar</button>
+            <button class="can-btn"><a href="list_esp.php"  class="can_link">Cancelar</a></button>
+          </div>
+        </form>
+      </div>
+    </section>
+    </div>
+    </main>
   </body>
 </html>

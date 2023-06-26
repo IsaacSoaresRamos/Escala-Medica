@@ -16,6 +16,7 @@
     --color-VerdeAgua: #06b88e;
     --color-VerdeI: #3cb138;
     --color-VerdeEscuro: #052704;
+    --color-Vermelho: #f14343;
     --color-Verde: #54d65e;}
 
 /* Body */
@@ -60,7 +61,7 @@
         background-color: var(--color-Menu);}
         .pack-menu button:hover {
             transition: 0.5s;
-            color: var(--color-Verde);}
+            color: var(--color-Vermelho);}
 .link-login {
     display: inherit;
     margin-left: 65rem;
